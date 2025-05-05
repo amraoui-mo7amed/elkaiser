@@ -647,4 +647,4 @@ def download_image(file_name, image_name):
 
 
 if __name__ == "__main__":
-    Home.run( debug=False)
+    Home.run( debug=True)
