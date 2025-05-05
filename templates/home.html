@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القيصر للاستثمار/الرئيسية</title>
+    <link rel="icon" href="/static/img/logo.jpeg">
+</head>
+<style>
+    *{
+        box-shadow: 0%;
+        margin: 0%;
+        padding: 0%;
+    }
+    body{
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(2 , auto);
+        grid-template-areas: 'header'
+                             'main';
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+    }
+    header{
+        height: 700px;
+        grid-area: header;
+        display: grid;
+        grid-template-rows: repeat(2 , auto);
+        width: 100%;
+    }
+    #menu{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2 , auto);
+        height: 80px;
+        background-color:rgb(27, 27, 27) ;
+    }
+    #logoheader{
+        width: 130px;
+        height: 140px;
+        clip-path: polygon(50% 100%, 100% 65%, 100% 0, 0 0, 0 65%);
+        border: solid;
+        border-top: black;
+        border-color: #f1d299;
+        background-image: url(/static/img/logo.jpeg);
+        background-size: contain;
+        margin-left: 40px;
+        z-index: 250;
+    }
+    #login{
+        color: rgb(0, 0, 0);
+        background-color: #9e9165;
+        border-radius: 30px;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bolder;
+        cursor: pointer;
+        padding-top: 15px;
+        transition: .4s;
+       
+    }
+    #login:hover{
+        background-color: #e2cd88;
+        color: #000000;
+    }
+    #title{
+        text-align: center;
+        z-index: 200;
+    }
+    #menutitle{
+       position: relative;
+       top: -470px;
+       color: rgb(196, 196, 196);
+       font-size: 23px;
+       
+    }
+    #headerbutton1{
+        color: white;
+        padding:10px ;
+        width: 200px;
+        font-size: 25px;
+        font-weight: bolder;
+        border-radius: 5px;
+        border-color: #c4b47e;
+        background-color: rgb(27, 27, 27);
+        background-image: linear-gradient(#c4b47e , #c4b47e);
+        background-size: 0 100%;
+        background-repeat: no-repeat;
+        transition: .4s;
+        font-weight: bolder;
+        margin-top: 100px;
+        cursor: pointer;
+    }
+    #headerbutton2{
+        color: white;
+        padding:10px ;
+        margin-left: 35px;
+        font-size: 25px;
+        font-weight: bolder;
+        border-radius: 5px;
+        border-color: #c4b47e;
+        background-color: rgb(27, 27, 27);
+        background-image: linear-gradient(#c4b47e , #c4b47e);
+        background-size: 0 100%;
+        background-repeat: no-repeat;
+        transition: .4s;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+    #headerbutton1:hover,#headerbutton2:hover{
+        background-size: 100% 100%;
+        color: black;
+    }
+    #title img{
+        height: 622px;
+        width: 100%;
+        filter: brightness(40%);
+    }
+    
+    .topnav {
+        margin-right: 40px;
+        display: flex;
+        justify-content: right;
+      }
+    .topnav a {
+        margin-top: 10px;
+        float: left;
+        display: flex;
+        color: #f2f2f2;
+        text-align: right;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        background-color: rgb(27, 27, 27);
+        z-index: 100;
+      }
+      .topnav a:hover{
+        background-color: #9e9165;
+        border-radius: 10px;
+      } 
+    .topnav .icon {
+        display: none;
+      }
+      
+    @media screen and (max-width: 760px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+      }
+      
+    @media screen and (max-width: 760px) {
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+        .topnav{
+            display: block;
+            margin-right: 0px;
+        }
+        #title{
+            z-index: 0;
+        }
+        #menu{
+            z-index: 2000;
+        }
+        #logoheader{
+            margin-left: 20px;
+        }
+      }
+
+     
+
+    main{
+        width: 100%;
+        grid-area: main;
+        grid-template-rows: repeat(5 , 1fr);
+    }
+    #stepsdiv{
+        display: grid;
+        grid-template-rows: repeat(2 , auto);
+        background-color:rgb(27, 27, 27);
+        padding-bottom: 20px;
+    }
+    #titlesteps{
+        text-align: center;
+        color: white;
+        margin-top: 120px;
+        font-size: 22px;
+    }
+    #threesteps{
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+        justify-content:center;
+        margin-top: 50px;
+    }
+    #threesteps div{
+        text-align: center;
+    }
+    #threesteps h1{
+        margin-top: 22px;
+        margin-bottom: 20px;
+        font-size: 28px;
+        color:white;
+    }
+    #threesteps h3{
+        margin-top: 5px;
+        color: white;
+        font-size: 15px;
+    }
+    #threesteps button{
+        margin-top: 22px;
+        width: 120px;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bolder;
+        background-color: #a5986c;
+        border-radius: 5px;
+        box-shadow:  10px 10px 10px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    #threesteps button:hover{
+        width: 180px;
+        background-color: #eed47d;
+    }
+    .stepsborder{
+        border-bottom: 10px solid #8d8056 ;
+        border-radius: 5px;
+        box-shadow: 10px 10px 15px;
+        transition: .4s;
+        cursor: pointer;
+    }
+    .stepsborder:hover{
+        border-bottom: 10px solid #ffe79a ;
+        scale: 1.2;
+    }
+    @media screen and (max-width: 1325px) {
+        #threesteps{
+            grid-template-columns: repeat(2 , 1fr);
+            
+        }
+        .step3{
+            grid-column: span 2;
+            margin-top: 50px;
+        }
+      }
+
+
+
+
+
+
+    #whyusdiv{
+        background-color: rgb(27, 27, 27);
+        text-align: center;
+        padding: 150px;
+        color: white;
+        position: relative;
+    }
+    #whyusdiv h1{
+        font-size: 45px;
+    }
+    #whyusdiv pre{
+        margin-top: 40px;
+        font-size: 20px;
+        z-index: 555;
+    }
+    
+    #whyfire1{
+        position: absolute;
+        left: 15%;
+        top: 200px;
+        filter: opacity(40%);
+    }
+
+
+
+
+
+    #workdiv{
+        display: grid;
+        grid-template-columns:repeat(2 , auto) ;
+        background-color:rgb(27, 27, 27);
+        padding-top: 50px;
+    }
+    #worklist{
+        display: grid;
+        grid-template-rows: repeat(5 , 1fr);
+        justify-content: right;
+        
+    }
+    .work1{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        width: 500px;
+        text-align: center;
+        border: solid #c4b47e ;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        transition: .5s;
+        cursor: pointer;
+    }
+    .work1:hover{
+        margin-left: 100px;
+        background-color: #9e9165;
+    }
+    .work2:hover{
+        margin-left: 100px;
+        background-color: #9e9165;
+    }
+    .work3:hover{
+        margin-left: 100px;
+        background-color: #9e9165;
+    }
+    .work4:hover{
+        margin-left: 100px;
+        background-color: #9e9165;
+    }
+    .work5:hover{
+        margin-left: 100px;
+        background-color: #9e9165;
+    }
+    .work1::before{
+        width: 50px;
+        height: 40px;
+        font-size: 35px;
+        text-align: center;
+        content: '1';
+        background-color: #c4b47e;
+        font-weight: bolder;
+        margin-left: 5px;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+    .work1pic{
+        text-align: left;
+    }
+    #worklist h1{
+       margin-top: 15px;
+    }
+    .work2{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        width: 500px;
+        text-align: center;
+        border: solid #c4b47e ;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        transition: .5s;
+        cursor: pointer;
+    }
+    .work3{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        width: 500px;
+        text-align: center;
+        border: solid #c4b47e ;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        transition: .5s;
+        cursor: pointer;
+    }
+    .work4{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        width: 500px;
+        text-align: center;
+        border: solid #c4b47e ;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        transition: .5s;
+        cursor: pointer;
+    }
+    .work5{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        width: 500px;
+        text-align: center;
+        border: solid #c4b47e ;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        transition: .5s;
+        cursor: pointer;
+    }
+    .work2::before{
+        width: 50px;
+        height: 40px;
+        font-size: 35px;
+        text-align: center;
+        content: '2';
+        background-color: #c4b47e;
+        font-weight: bolder;
+        margin-left: 5px;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+    .work3::before{
+        width: 50px;
+        height: 40px;
+        font-size: 35px;
+        text-align: center;
+        content: '3';
+        background-color: #c4b47e;
+        font-weight: bolder;
+        margin-left: 5px;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+    .work4::before{
+        width: 50px;
+        height: 40px;
+        font-size: 35px;
+        text-align: center;
+        content: '4';
+        background-color: #c4b47e;
+        font-weight: bolder;
+        margin-left: 5px;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+    .work5::before{
+        width: 50px;
+        height: 40px;
+        font-size: 35px;
+        text-align: center;
+        content: '5';
+        background-color: #c4b47e;
+        font-weight: bolder;
+        margin-left: 5px;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+    #worklogo{
+        justify-self: center;
+    }
+    #worklogo1{
+        position: relative;
+        top: 0px;
+        animation: logowork1 3s infinite alternate;
+    }
+    @keyframes logowork1{
+        0%{
+         top: 0px;
+        }
+        100%{
+         top:420px ;
+        }
+    }
+    #systembutton{
+        width: 150px;
+        height: 55px;
+        font-size: 25px;
+        font-weight: bolder;
+        padding: 8px;
+        border-radius: 8px;
+        background-color: #f1d299;
+        transition: 0.5s;
+    }
+    #systembutton:hover{
+        width: 300px;
+    }
+    #system pre{
+        font-weight: bolder;
+    }
+    #gpsdiv2{
+        display: flex;
+        justify-content: center;
+        background-color:rgb(27, 27, 27) ;
+        text-align: center;
+    }
+    #gpsdiv:hover{
+        background-color:#f0d682 ;
+        cursor: pointer;
+    }
+    #gpsdiv{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        color: rgb(0, 0, 0);
+        background-color:#9e9165 ;
+        padding: 50px;
+        border-radius: 80px;
+        max-width: 1000px;
+        margin-top: 150px;
+        font-weight: bolder;
+        box-shadow: 20px 20px 25px;
+        margin-bottom: 50px;
+    }
+    #google{
+        border-radius: 10px;
+        filter: brightness(70%);
+        padding-top: 20px;
+    }
+    #google:hover{
+        filter: brightness(100%);
+    }
+    #contactus{
+        display:inline-block;
+        align-self: center;
+        margin-right: 50px;
+        border-right: solid;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    #systemh1{
+        font-size: 50px;
+    }
+    #systemh2{
+        font-size: 80px;
+    }
+    #systemh3{
+        font-size: 20px;
+    }
+
+
+
+
+    footer{
+        grid-area: footer;
+    }
+
+
+    @media screen and (max-width: 1325px) {
+        #threesteps{
+            grid-template-columns: repeat(2 , 1fr);
+        }
+        .step3{
+            grid-column: span 2;
+            margin-top: 50px;
+        }
+        #gpsdiv{
+            grid-template-columns: repeat(1 , 1fr);
+        }
+        #contactus{
+            border: none;
+            margin-right: 0px;
+        }
+        #gps{
+            margin-top: 40px;
+        }
+      }
+    @media screen and (max-width: 1025px){
+        #worklogo{
+            display: none;
+        }
+        #workdiv{
+            grid-template-columns: repeat(1 , auto);
+        }
+        #worklist{
+            justify-content: center;
+        }
+      }
+    @media screen and (max-width: 858px){
+        #threesteps{
+            grid-template-columns: repeat(1 , auto);
+        }
+        .step3{
+            grid-column: span 1;
+            margin-top: 50px;
+        }
+        #whyusdiv h1{
+            font-size: 25px;
+        }
+        #google{
+            width: 200px;
+        }
+      }
+      @media screen and (max-width: 710px){
+        #systemh1{
+           font-size: 20px;
+        }
+        #systemh2{
+            font-size: 40px;
+        }
+        #whyfire1{
+            display: none;
+        }
+        #threesteps div{
+            padding-left: 0;
+        }
+      }
+
+      #text_from_admin{
+        background-color: rgb(27, 27, 27);
+        font-size: 30px;
+        direction: rtl;
+        color: #8d8056;
+        padding-top: 100px;
+        text-align: center;
+      }
+
+</style>
+<body>
+    <header>
+        <div id="menu">
+            <div id="logoheader">
+               
+            </div>
+            <div id="menuheader" class="topnav">
+            <a href="#gpsdiv2">إتصل بنا</a> 
+            <a href="#system">البطاقات</a> 
+            <a href="#whyusdiv">لماذا نحن</a>
+            <a href="#stepsdiv">كيف ابدأ</a>
+            <a href="http://nouh.pythonanywhere.com/">الرئيسية</a>
+            <a id="login" href="http://nouh.pythonanywhere.com/login">تسجيل الدخول</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>        
+            </div>
+
+        </div>
+        <div id="title">
+                 <img src="/static/img/homepic.jpg" alt="">
+                 <div id="menutitle">
+                   <h1 style="margin-bottom: 30px;">
+                    منصة للإستثمار 
+                   </h1>
+                   <h1 >
+                    شغل أموالك معنا الآن
+                   </h1>
+                   <button id="headerbutton1" onclick="document.location='http://nouh.pythonanywhere.com/addaccount'"  >إنشاء حساب</button>
+                   <button id="headerbutton2" onclick="document.location='http://nouh.pythonanywhere.com/login'">تسجيل الدخول</button>
+                 </div>
+        </div>
+
+    </header>
+    <main>
+        <div id="stepsdiv">
+             <div id="titlesteps">
+                <h1>الخطوات الثلاثة للبدء</h1>
+             </div>
+             <div id="threesteps">
+
+                <div>
+                    <img class="stepsborder" src="/static/img/stepsthree.jpg" alt="" width="350px" height="220px">
+                    <h1>الحصول على الأرباح</h1>
+                    <h3>أدخل الى حسابك وتفقد</h3>
+                    <h3>أرباحك واسحبها</h3>
+                    <button onclick="document.location='http://nouh.pythonanywhere.com/login'">تسجيل الدخول</button>
+                 </div>
+                 <div>
+                    <img class="stepsborder" src="/static/img/stepstwo.jpg" alt="" width="350px" height="220px">
+                    <h1>قم بالإيداع الان</h1>
+                    <h3>أدخل الى حسابك الان</h3>
+                    <h3>وانظم الى مشروعنا الجديد</h3>
+                    <button onclick="document.location='http://nouh.pythonanywhere.com/login'">تسجيل الدخول</button>
+                 </div>
+                 <div class="step3">
+                    <img class="stepsborder" src="/static/img/stepsone.jpg" alt="" width="350px" height="220px">
+                    <h1>شغل أموالك على الفور</h1>
+                    <h3>قم بالتسجيل في المنصة</h3>
+                    <h3>وأحصل على فرصتك الان</h3>
+                    <button onclick="document.location='http://nouh.pythonanywhere.com/login'">سجل الان</button>
+                 </div>
+                 
+                 
+             </div>
+        </div>
+        <div id="whyusdiv">
+            <img id="whyfire1" src="/static/img/whyfire1.png" alt="">
+             <h1>لماذا نحن ؟</h1>
+             <p style="line-height: 2;width:100%; font-size:25px;margin-top:20px;">نحن شركة القيصر للاستثمار وتوظيف الأموال نعمل على تجسيد مشاريع حقيقية على أرض الواقع ونقدم لك ارباحا ملموسة من خلال 
+استثمار اموالك في مجالات متنوعة اهمهاالزراعة والصناعة بحيث يسهر على تجسيد مشاريعنا فريق من الخبراء كل بحسب تخصصه وكفائته.
+من خلال اشتراكك في موقعنا يمكنك دخول عالم الاستثمار والشراكة
+في احد مشاريعنا وذلك بنظام الصناديق الإستثمارية ،وهذا مايسمح لك بالحصول على بطاقتك الإستثمارية وأرباحك بطريقة شرعية. 
+نحن لا نعدك بالربح المضمون ولكننا نعدك بالاجتهاد والسعي في دراسة المشاريع وتجسيدها كما يلزم من اجل الحصول على أفضل النتائج
+</p>
+        </div>
+
+
+
+        <div id="workdiv">
+              <div id="worklist">
+                  <div class="work1">
+                      <div class="work1title">
+                         <h1 style="color: white;">الخبرة والكفاءة</h1>
+                         
+                      </div>
+                      <div class="work1pic">
+                          <img src="/static/img/work1.png" alt="" width="60px" style="margin-top: 10px;">
+                      </div>
+                      <h3 style="color: #f1d299;margin-top:15px;">نوظف خبرتنا في استثمار الأموال دون مخاطر</h3>
+                      
+                  </div>
+                  <div class="work2">
+                    <div class="work1title">
+                        <h1 style="color: white;">إستثمار آمن وحلال</h1>
+                        
+                     </div>
+                     <div class="work1pic">
+                         <img src="/static/img/work2.png" alt="" width="60px" style="margin-top: 10px;">
+                     </div>
+                     <h3 style="color: #f1d299;margin-top:15px;">نتحرى الصدق والأمانة والحلال في أعمالنا</h3>
+                  </div>
+                  <div class="work3">
+                    <div class="work1title">
+                        <h1 style="color: white;">منصة بسيطة</h1>
+                        
+                     </div>
+                     <div class="work1pic">
+                         <img src="/static/img/work3.png" alt="" width="60px" style="margin-top: 10px;">
+                     </div>
+                     <h3 style="color: #f1d299;margin-top:15px;">لوحة تحكم في غاية السهولة والبساطة</h3>
+                  </div>
+                  <div class="work4">
+                    <div class="work1title">
+                        <h1 style="color: white;">طرق إيداع وسحب محلية وخارجية</h1>
+                        
+                     </div>
+                     <div class="work1pic">
+                         <img src="/static/img/work4.png" alt="" width="60px" style="margin-top: 10px;">
+                     </div>
+                     <h3 style="color: #f1d299;margin-top:15px;">نوفر لك خيارات متعددة مناسبة لك للدفع والسحب</h3>
+                  </div>
+                  <div class="work5">
+                    <div class="work1title">
+                        <h1 style="color: white;">دعم مستمر</h1>
+                        
+                     </div>
+                     <div class="work1pic">
+                         <img src="/static/img/work5.png" alt="" width="60px" style="margin-top: 10px;">
+                     </div>
+                     <h3 style="color: #f1d299;margin-top:15px;">نقدم لك دعما للمساعدة طيلة الأسبوع</h3>
+                  </div>
+              </div>
+
+              <div id="worklogo">
+                 <img id="worklogo1" src="/static/img/logoback.png" alt="">
+              </div>
+        </div>
+
+
+        <div id="system" style="text-align: center;color:white;background-color:rgb(27, 27, 27);padding-top:150px;">
+            <h1 id="systemh1" >خططنا</h1>
+            <h1 id="systemh2" >أحصل على بطاقتك الآن</h1>
+            <img src="/static/img/sytstempic.png" alt="" width="100px" style="padding:30px;">
+            <h1 id="systemh3" style="padding-bottom: 20px;">نظام البطاقات الاستثمارية</h1>
+            <pre style="font-size: 23px;line-height:2;" >
+ كل بطاقة تحتوي على عدد من الحصص الاستثمارية من 1 الى 40 حصة-
+                      قيمة الحصة الاستثمارية الواحدة 30000دج-
+                                  مدة الاستثمار : سنة كاملة-  
+                       الحصول على ارباح متفاوتة كل 3 اشهر-
+            </pre>
+            <button id="systembutton" onclick="document.location='http://nouh.pythonanywhere.com/login'">استثمر الآن</button>
+
+        </div>
+
+        <div id="text_from_admin">
+            <pre>{{ text }}</pre>
+        </div>
+
+
+        <div id="gpsdiv2">
+            <div id="gpsdiv">
+             <div id="contactus">
+                  <h1>لاستفساراتكم</h1>
+                  <span>رقم الهاتف</span><br><span style="font-size: 30px;">+213 656 07 04 85</span><br>
+                  <br>
+                  <a href="https://www.facebook.com/profile.php?id=100086995423060&mibextid=ZbWKwL"><img src="/static/img/fb.png" alt="" width="50px"></a>
+                  <a href="https://t.me/cesarinvestissement"><img src="/static/img/tele.png" alt="" width="50px"></a>
+             </div>
+             <div id="gps">
+               <h1>موقعنا على الخريطة</h1>
+               <iframe id="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.0092821270637!2d3.1966487152883882!3d36.7463482799597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8446867b69171e6c!2zMzbCsDQ0JzQ2LjkiTiAzwrAxMSc1NS44IkU!5e0!3m2!1sfr!2sdz!4v1674128403364!5m2!1sfr!2sdz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             </div>
+            </div>
+            
+        </div>
+
+    </main>
+    
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("menuheader");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+          }
+
+        $(document).ready(function(){
+            $("a").on('click', function(event) {
+          
+              if (this.hash !== "") {
+                event.preventDefault();
+          
+                var hash = this.hash;
+          
+                $('html, body').animate({
+                  scrollTop: $(hash).offset().top
+                },800, function(){
+             
+                  window.location.hash = hash;
+                });
+              } 
+            });
+          });
+    </script>
+</body>
+</html>

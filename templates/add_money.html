@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إيداع الأموال</title>
+    <link rel="icon" href="/static/img/logo.jpeg">
+    <style>
+        *{
+            box-shadow: 0%;
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            width: 100%;
+            display: grid;
+            grid-template-rows: repeat(3 , auto);
+            grid-template-areas: 'header'
+                                 'main'
+                                 'footer';
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                
+        }
+        header{
+            height: 300px;
+            grid-area: header;
+            display: grid;
+            grid-template-rows: repeat(2 , auto);
+            width: 100%;
+        }
+        #menu{
+            display: grid;
+            grid-template-columns: repeat(2 , auto);
+            height: 80px;
+            background-color:rgb(27, 27, 27) ;
+            width: 100%;
+        }
+        #logoheader{
+            width: 130px;
+            height: 140px;
+            clip-path: polygon(50% 100%, 100% 65%, 100% 0, 0 0, 0 65%);
+            border: solid;
+            border-top: black;
+            border-color: #f1d299;
+            background-image: url(/static/img/logo.jpeg);
+            background-size: contain;
+            margin-left: 40px;
+            z-index: 250;
+        }
+       
+        #title{
+            text-align: center;
+            z-index: 200;
+        }
+        #menutitle{
+           position: relative;
+           top: -230px;
+           color: rgb(196, 196, 196);
+           font-size: 23px;
+        }
+        #title img{
+            height: 300px;
+            width: 100%;
+            filter: brightness(40%);
+        }
+        
+
+
+        main{
+            width: 100%;
+            grid-area: main;
+            display: grid;
+            text-align: center;
+            padding-top: 150px;
+            background-color:rgb(27, 27, 27) ;
+            color: white;
+            justify-content: center;
+        }
+        
+        .line{
+            border-color: #9e9165;
+        }
+        main h1{
+            padding: 20px;
+        }
+        #seconddive{
+            margin-top: 50px;
+            text-align: right;
+            line-height: 3;
+        }
+        #inputmoney{
+            width: 220px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 30px;
+            background-color: #9e9165;
+            color: white;
+        }
+        #add_money_button{
+            font-size: 25px;
+            color: white;
+            padding: 5px;
+            width: 100px;
+            margin-top: 20px;
+            border-radius: 5px;
+            background-color: rgb(87, 87, 87);
+            background-image: linear-gradient(#9e9165,#9e9165);
+            background-repeat: no-repeat;
+            background-size: 0% 100%;
+            transition: 0.5s;
+            cursor: pointer;
+            margin-bottom: 25px;
+        }
+        #add_money_button:hover{
+            background-size: 100% 100%;
+            color:black;
+
+        }
+        #login{
+            color: rgb(211, 209, 209);
+            background-color: #9e9165;
+            border-radius: 30px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+            cursor: pointer;
+            transition: .4s;
+            margin-top: -20px;
+            z-index: 2000;
+        }
+        #login:hover{
+            background-color: rgb(89, 89, 89);
+            color: black;
+        }
+
+
+        
+
+
+
+        footer{
+            display: grid;
+            grid-template-rows: auto auto;
+            text-align: center;
+            padding-top: 200px;
+            background-color:rgb(27, 27, 27) ;
+            color: white;
+        }
+        #system{
+            background-color: rgba(44, 44, 44, 0.783);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: black 0px 10px 40px 20px;
+            justify-self: center;
+        }
+        #pageend{
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            background-color: #9e91657f;
+            margin-top: 100px;
+        }
+        #inputadd{
+          background-color: #c4b47e;
+          font-size: 20px;
+          padding: 5px;
+        }
+
+
+        .topnav {
+            margin-right: 40px;
+            display: flex;
+            justify-content: right;
+          }
+          
+        .topnav a {
+            margin-top: 10px;
+            float: left;
+            display: flex;
+            color: #f2f2f2;
+            text-align: right;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            background-color: rgb(27, 27, 27);
+            z-index: 100;
+          }
+          .topnav a:hover{
+            background-color: #9e9165;
+            border-radius: 10px;
+          } 
+        .topnav .icon {
+            display: none;
+          }
+          
+        @media screen and (max-width: 760px) {
+            .topnav a:not(:first-child) {display: none;}
+            .topnav a.icon {
+              float: right;
+              display: block;
+            }
+          }
+          
+        @media screen and (max-width: 760px) {
+            .topnav.responsive {position: relative;}
+            .topnav.responsive .icon {
+              position: absolute;
+              right: 0;
+              top: 0;
+            }
+            .topnav.responsive a {
+              float: none;
+              display: block;
+              text-align: left;
+            }
+            .topnav{
+                display: block;
+                margin-right: 0px;
+            }
+            #title{
+                z-index: 0;
+            }
+            #menu{
+                z-index: 2000;
+            }
+            #logoheader{
+                margin-left: 20px;
+            }
+          }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="menu">
+            <div id="logoheader">
+               
+            </div>
+            <div id="menuheader" class="topnav">
+             <a href="http://nouh.pythonanywhere.com/home">{{ user_name }}</a>
+             <a href="http://nouh.pythonanywhere.com/deposit">إيداع</a>
+            <a href=""><form action="{{ url_for('logout') }}" method="post">
+                <input id="login" type="submit" value="تسجيل الخروج">
+             </form></a>
+             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+             </a> 
+            </div>
+
+        </div>
+        <div id="title">
+                 <img src="/static/img/homepic1.jpg" alt="">
+                 <div id="menutitle">
+                   <h1 style="margin-bottom: 30px;">
+                    أموالك المودعة في أمان
+                   </h1>
+                   <h1 >
+                    تمتع معنا بالأرباح
+                   </h1>
+                 </div>
+        </div>
+    </header>
+
+
+    <main >
+        <div id="maindiv">
+            <div id="firstdiv">
+             <hr class="line">
+             <h1>ضع مبلغ الإيداع الخاص بك</h1>
+             <h3 style="color: #9e9165;margin-bottom:10px;">مبلغ الإيداع يكون مضاعف لرقم 3</h3>
+             <hr class="line"> 
+            </div>
+        
+            <div id="seconddive">
+            <form action="/deposit" method="post" name="add_money" enctype="multipart/form-data">
+                <h3 style="font-size: 25px;">المبلغ</h3> 
+                <input id="inputmoney" list="money"  type="number"  name="money" required placeholder="أكتب المبلغ هنا" >
+                <datalist id="money">
+                    <option value="3"></option>
+                    <option value="6"></option>
+                    <option value="9"></option>
+                    <option value="12"></option>
+                    <option value="15"></option>
+                    <option value="18"></option>
+                    <option value="21"></option>
+                    <option value="24"></option>
+                    <option value="27"></option>
+                    <option value="30"></option>
+                    <option value="33"></option>
+                    <option value="36"></option>
+                    <option value="39"></option>
+                    <option value="42"></option>
+                    <option value="45"></option>
+                    <option value="48"></option>
+                    <option value="51"></option>
+                    <option value="54"></option>
+                    <option value="57"></option>
+                    <option value="60"></option>
+                    <option value="63"></option>
+                    <option value="66"></option>
+                    <option value="69"></option>
+                    <option value="72"></option>
+                    <option value="75"></option>
+                    <option value="78"></option>
+                    <option value="81"></option>
+                    <option value="84"></option>
+                    <option value="87"></option>
+                    <option value="90"></option>
+                    <option value="93"></option>
+                    <option value="96"></option>
+                    <option value="99"></option>
+                    <option value="102"></option>
+                    <option value="105"></option>
+                    <option value="108"></option>
+                    <option value="111"></option>
+                    <option value="114"></option>
+                    <option value="117"></option>
+                    <option value="120"></option>
+                </datalist>
+                <br>
+                <h3 style="font-size: 25px;">اسم العميل (الإسم الخاص بالرصيد في البنك)</h3> 
+                <input id="inputmoney" type="text" name="user_name" required placeholder="اسم العميل">
+                <br>
+                <h3 style="font-size: 25px;">صورة وصل الإرسال ( متوفر حساب السيسيبي فقط حاليا)</h3>
+                <h3>رقم الحساب</h3>
+                <input type="file" id="inputadd" name="pic" dir="rtl">
+                <br>
+                <input type="submit"  value="إيداع" id="add_money_button">
+            </form>
+            </div>
+            <hr class="line">
+        </div>
+        
+ 
+    </main>
+
+
+
+    <footer>
+          <div id="pageend">
+              <div id="contactus" style="padding-top: 70px;">
+                  <h1>إتصل بنا</h1>
+                  <h1>+213656070485</h1>
+              </div>
+              <div id="logo">
+                <img src="/static/img/logoback.png" alt="" width="220px">
+              </div>
+          </div>
+    </footer>
+
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("menuheader");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+
+</body>
+</html>

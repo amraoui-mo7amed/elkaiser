@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مرحبا بعودتك</title>
+    <link rel="icon" href="/static/img/logo.jpeg">
+    <style>
+        *{
+            box-shadow: 0%;
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            width: 100%;
+            display: grid;
+            grid-template-rows: repeat(3 , auto);
+            grid-template-areas: 'header'
+                                 'main'
+                                 'footer';
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                
+        }
+        header{
+            height: 600px;
+            grid-area: header;
+            display: grid;
+            grid-template-rows: repeat(2 , auto);
+            width: 100%;
+        }
+        #menu{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2 , auto);
+            height: 80px;
+            background-color:rgb(27, 27, 27) ;
+        }
+        #logoheader{
+            width: 130px;
+            height: 140px;
+            clip-path: polygon(50% 100%, 100% 65%, 100% 0, 0 0, 0 65%);
+            border: solid;
+            border-top: black;
+            border-color: #f1d299;
+            background-image: url(/static/img/logo.jpeg);
+            background-size: contain;
+            margin-left: 40px;
+            z-index: 250;
+        }
+        #login{
+            color: rgb(211, 209, 209);
+            background-color: #9e9165;
+            border-radius: 30px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+            margin-top: -20px;
+            cursor: pointer;
+            transition: .4s;
+            z-index: 2000;
+        }
+        #login:hover{
+            background-color: rgb(89, 89, 89);
+            color: black;
+        }
+        #title{
+            text-align: center;
+            z-index: 200;
+        }
+        #menutitle{
+           position: relative;
+           top: -400px;
+           color: rgb(196, 196, 196);
+           font-size: 23px;
+        }
+        #headerbutton1{
+            margin-top: 120px;
+            padding:10px ;
+            width: 200px;
+            font-size: 25px;
+            background-color: #c4b47e;
+            font-weight: bolder;
+            border-radius: 5px;
+        }
+        #headerbutton2{
+            margin-top: 120px;
+            padding:10px ;
+            margin-left: 35px;
+            font-size: 25px;
+            background-color: #c4b47e;
+            font-weight: bolder;
+            border-radius: 5px;
+        }
+        #title img{
+            height: 522px;
+            width: 100%;
+            filter: brightness(40%);
+        }
+        #headerbutton{
+                margin-top: 120px;
+                padding:10px ;
+                width: 200px;
+                font-size: 25px;
+                color: white;
+                border-color: #c4b47e;
+                background-color: rgb(27, 27, 27);
+                background-image: linear-gradient(#c4b47e , #c4b47e);
+                background-size: 0 100%;
+                background-repeat: no-repeat;
+                transition: .4s;
+                font-weight: bolder;
+                border-radius: 5px;
+        }
+        #headerbutton:hover{
+            background-size: 100% 100%;
+            color: black;
+        }
+        .topnav {
+            margin-right: 40px;
+            display: flex;
+            justify-content: right;
+          }
+          
+        .topnav a {
+            margin-top: 10px;
+            float: left;
+            display: flex;
+            color: #f2f2f2;
+            text-align: right;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            background-color: rgb(27, 27, 27);
+            z-index: 100;
+          }
+        .topnav a:hover{
+            background-color: #9e9165;
+            border-radius: 10px;
+          } 
+        .topnav .icon {
+            display: none;
+          }
+          
+        @media screen and (max-width: 760px) {
+            .topnav a:not(:first-child) {display: none;}
+            .topnav a.icon {
+              float: right;
+              display: block;
+            }
+          }
+          
+        @media screen and (max-width: 760px) {
+            .topnav.responsive {position: relative;}
+            .topnav.responsive .icon {
+              position: absolute;
+              right: 0;
+              top: 0;
+            }
+            .topnav.responsive a {
+              float: none;
+              display: block;
+              text-align: left;
+            }
+            .topnav{
+                display: block;
+                margin-right: 0px;
+            }
+            #title{
+                z-index: 0;
+            }
+            #menu{
+                z-index: 2000;
+            }
+            #logoheader{
+                margin-left: 20px;
+            }
+          }
+
+
+
+
+
+
+
+        main{
+            grid-area: main;
+            display: grid;
+            grid-template-columns: repeat(3 , 1fr);
+            text-align: center;
+            padding-top: 150px;
+            background-color:rgb(27, 27, 27) ;
+            justify-items: center;
+            position:relative;
+        }
+        @media screen and (max-width: 1325px) {
+            main{
+                grid-template-columns: repeat(2 , 1fr);
+            }
+            #boxthree{
+                grid-column: span 2;
+                margin-top: 50px;
+            }
+          }
+        main h1{
+            color: white;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+        main span{
+          color: #9e9165;
+          font-size: 25px;
+          font-weight: bolder;
+        }
+        #itemshap1{
+            background-color: #9e9165;
+            width: 300px;
+            height: 130px;
+            clip-path: polygon(60% 29%, 100% 0, 100% 100%, 0 100%, 0 20%, 20% 70%, 51% 80%);
+        }
+        #itemshap2{
+            background-color: #9e9165;
+            width: 300px;
+            height: 130px;
+            clip-path: polygon(82% 50%, 100% 0, 100% 100%, 0 100%, 0 0, 27% 57%, 51% 16%);
+        }
+        #itemshap3{
+            background-color: #9e9165;
+            width: 300px;
+            height: 130px;
+            clip-path: polygon(82% 29%, 100% 0, 100% 100%, 0 100%, 0 0, 27% 57%, 51% 16%);
+        }
+        
+        #boxone:hover,#boxtwo:hover,#boxthree:hover {
+            animation: shake 0.5s;
+          }
+          @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+          }
+          #projet{
+            width: 500px;
+            height: 200px;
+            overflow: scroll;
+            font-size: 25px;
+            direction: rtl;
+            margin-top: 30px;
+            padding: 10px;
+            background-color:rgb(27, 27, 27) ;
+            color: #9e9165;
+            font-weight: bolder;
+          }
+          #button2i3ada{
+            margin-top: 25px;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 7px;
+            background-color: rgb(77, 75, 75);
+            cursor: pointer;
+            color:#9e9165;
+          }
+          #buttonsa7b{
+            margin-top: 25px;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 7px;
+            background-color: rgb(77, 75, 75);
+            cursor: pointer;
+            color:#9e9165;
+          }
+          .haha{
+            margin-top: 25px;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 7px;
+            background-color: rgb(77, 75, 75);
+            cursor: pointer;
+            color:#9e9165;
+          }
+          #button2i3ada_rasmal{
+            margin-top: 25px;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 7px;
+            background-color: rgb(77, 75, 75);
+            cursor: pointer;
+            color:#9e9165;
+          }
+          
+
+
+
+
+        footer{
+            display: grid;
+            grid-template-rows: auto auto auto;
+            text-align: center;
+            padding-top: 200px;
+            background-color:rgb(27, 27, 27) ;
+            color: white;
+        }
+        #system{
+            background-color: rgba(44, 44, 44, 0.783);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: black 0px 10px 40px 20px;
+            justify-self: center;
+            margin-bottom: 100px;
+            width: 600px;
+        }
+        #pageend{
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            background-color: #9e91657f;
+            margin-top: 100px;
+        }
+        #cardsystembutton{
+            width: 150px;
+            height: 55px;
+            font-size: 25px;
+            font-weight: bolder;
+            padding: 8px;
+            border-radius: 8px;
+            background-color: #f1d299;
+            transition: 0.5s;
+        }
+        #cardsystembutton:hover{
+            width: 300px;
+        }
+        #message{
+          background-color:rgb(27, 27, 27) ;
+          color: red ;
+          padding-top: 20px;
+          text-align: center;
+          position: absolute;
+          font-size: 25px;
+          animation-name: message;
+          animation-duration: 0.5s;
+          animation-iteration-count: infinite;
+          
+        }
+        @keyframes message{
+          from{color: red;
+              font-size: 25px;}
+          to{color: rgb(68, 61, 61);
+             font-size: 28px;}
+        }
+        
+        #message2{
+          background-color:rgb(27, 27, 27) ;
+          color:#9e9165 ;
+          top: 70px;
+          text-align: center;
+          position: absolute;
+          font-size: 25px;
+        }
+        #button_feedback{
+            margin-top: 25px;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 7px;
+            background-color: rgb(77, 75, 75);
+            cursor: pointer;
+            color:#9e9165;
+            transition: .6s;
+            font-weight: bolder;
+            padding: 8px;
+        }
+        #button_feedback:hover{
+          background-color: #9e9165;
+          color: black;
+          
+        }
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div id="menu">
+            <div id="logoheader">
+               
+            </div>
+            <div id="menuheader" class="topnav">
+             <a href="http://nouh.pythonanywhere.com/home">{{first_name}}</a>
+             <a href="http://nouh.pythonanywhere.com/deposit">إيداع</a>
+             <a href="http://nouh.pythonanywhere.com/case">تكملة الملف</a>
+             <a href=""><form action="{{ url_for('logout') }}" method="post">
+                <input id="login" type="submit" value="تسجيل الخروج">
+             </form></a>
+             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+             </a> 
+             </div>
+
+        </div>
+        <div id="title">
+                 <img src="/static/img/homepic1.jpg" alt="">
+                 <div id="menutitle">
+                   <h1 style="margin-bottom: 30px;">
+                    أموالك في أمان وتزايدة بشكل مستمر
+                   </h1>
+                   <h1 >
+                    إستمتع معنا بالأرباح
+                   </h1>
+                   <button id="headerbutton">أودع أموالك الآن</button>
+                 </div>
+        </div>
+    </header>
+
+       
+
+    <main>
+
+         <div id="message">
+          <h3>
+            {{ message }}
+          </h3>
+        </div>
+        <div id="message2">
+          <h3>
+            {{ date_close }}
+          </h3>
+        </div>
+
+        <div id="boxone">
+              <h1>الرصيد الإجمالي</h1>
+              <h1>{{ money3 }}</h1>
+              <span>دج</span>
+              <div id="itemshap1"></div>
+              <h2 dir="rtl" style="width:300px; margin-top:20px;color:#9e9165;">تبق لك مبلغ {{money4}} للوصول إلى 120 مليون سنتيم</h2>
+        </div>
+        <div id="boxtwo">
+            <h1>الأرباح</h1>
+            <h1 id="h11">{{ money2 }}</h1>
+            <span>دج</span>
+            <div id="itemshap2"></div>
+            <form action="{{ url_for('i3adet_istithmer') }}" method="post">
+               <button  id="button2i3ada">إعادة إستثمار الأرباح</button>
+            </form>
+            <form action="{{ url_for('sa7b_benifit') }}" method="post">
+              <button  id="buttonsa7b">سحب الأرباح</button>
+           </form>
+        </div>
+        <div id="boxthree">
+            <h1>رأس المال</h1>
+            <h1>{{ money1 }}</h1>
+            <span>دج</span>
+              <div id="itemshap3"></div>
+              <form action="{{ url_for('sa7b_ras_almal') }}" method="post">
+                <button  class="haha">سحب رأس المال</button>
+             </form>
+             <form action="{{ url_for('i3adet_ras_almal') }}" method="post">
+              <button  class="haha" >إعادة إستثمار رأس المال</button>
+           </form>
+              
+        </div>
+
+        
+    </main>
+
+
+
+    <footer>
+          
+          <div id="system">
+              <h1 style="color: #9e9165;">مشروعك الحالي</h1>
+              <textarea id="projet" cols="80">{{ projet }}</textarea>
+          </div>
+
+          <div id="feedback" >
+              <h1 style="color: #9e9165;margin-bottom:30px;">أترك لنا تعليق لتطوير الموقع أكثر</h1>
+              <form action="{{ url_for('submit_feedback') }}" method="post">
+              <textarea style="width:400px;height:120px;border-radius:10px;font-size:25px"  id="feedback" name="feedback"></textarea><br>
+              <button id="button_feedback">إرسال</button>
+              </form>
+          </div>
+          <div id="video">
+            
+
+          </div>
+
+          <div id="pageend">
+              <div id="contactus" style="padding-top: 70px;">
+                  <h1>إتصل بنا</h1>
+                  <h1>+213656070485</h1>
+              </div>
+              <div id="logo">
+                <img src="/static/img/logoback.png" alt="" width="220px">
+              </div>
+          </div>
+    </footer>
+
+    <script>
+
+       
+
+
+
+        $(document).ready(function(){
+            $("a").on('click', function(event) {
+          
+              if (this.hash !== "") {
+                event.preventDefault();
+          
+                var hash = this.hash;
+          
+                $('html, body').animate({
+                  scrollTop: $(hash).offset().top
+                },800, function(){
+             
+                  window.location.hash = hash;
+                });
+              } 
+            });
+          });
+
+        function myFunction() {
+            var x = document.getElementById("menuheader");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+        };
+
+        const number = "{{ date_take_benifit }}";
+        const startDate_benifit = new Date("{{ first_date }}");
+        const currentDate_benifit = new Date();
+        const fortyFiveDaysLater = new Date(startDate_benifit.getTime() + number * 24 * 60 * 60 * 1000);
+        
+        if (currentDate_benifit >= startDate_benifit && currentDate_benifit < fortyFiveDaysLater) {
+          document.getElementById("button2i3ada").disabled = true;
+          document.getElementById("buttonsa7b").disabled = true;
+        }      
+        
+
+        const startDate = new Date("{{ first_date }}");
+        const currentDate = new Date();
+        const oneYearLater = new Date(startDate.getTime() + 365 * 24 * 60 * 60 * 1000);
+        
+        if (currentDate >= startDate && currentDate < oneYearLater) {
+          document.getElementsByClassName("haha")[0].disabled = true;
+          document.getElementsByClassName("haha")[1].disabled = true;
+          document.getElementsByClassName("haha")[0].style.color = 'rgb(38, 38, 38)'
+          document.getElementsByClassName("haha")[1].style.color = 'rgb(38, 38, 38)'
+        }      
+      </script>
+
+
+</body>
+</html>
