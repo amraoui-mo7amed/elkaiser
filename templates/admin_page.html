@@ -22,7 +22,7 @@
                                  'main'
                                  'footer';
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                
+
         }
         header{
             height: 500px;
@@ -35,17 +35,17 @@
             display: grid;
             grid-template-columns: repeat(2 , auto);
             height: 80px;
-            background-color:rgb(27, 27, 27) ;
+            background-color:rgb(0, 0, 0) ;
             width: 100%;
         }
-        
+
         #logoheader{
             width: 130px;
             height: 140px;
             clip-path: polygon(50% 100%, 100% 65%, 100% 0, 0 0, 0 65%);
             border: solid;
             border-top: black;
-            border-color: #f1d299;
+            border-color: #f8e580;
             background-image: url(/static/img/logo.jpeg);
             background-size: contain;
             margin-left: 40px;
@@ -54,7 +54,7 @@
         #login{
             color: rgb(211, 209, 209);
             margin-top: -20px;
-            background-color: #9e9165;
+            background-color: #f8e580;
             border-radius: 30px;
             padding: 10px;
             font-size: 20px;
@@ -83,7 +83,7 @@
             padding:10px ;
             width: 200px;
             font-size: 25px;
-            background-color: #c4b47e;
+            background-color: #f8e580;
             font-weight: bolder;
             border-radius: 5px;
         }
@@ -92,14 +92,13 @@
             padding:10px ;
             margin-left: 35px;
             font-size: 25px;
-            background-color: #c4b47e;
+            background-color: #f8e580;
             font-weight: bolder;
             border-radius: 5px;
         }
         #title img{
             height: 422px;
             width: 100%;
-            filter: brightness(40%);
         }
         #headerbutton{
                 margin-top: 120px;
@@ -107,9 +106,9 @@
                 width: 200px;
                 font-size: 25px;
                 color: white;
-                border-color: #c4b47e;
-                background-color: rgb(27, 27, 27);
-                background-image: linear-gradient(#c4b47e , #c4b47e);
+                border-color: #f8e580;
+                background-color: rgb(0, 0, 0);
+                background-image: linear-gradient(#f8e580 , #f8e580);
                 background-size: 0 100%;
                 background-repeat: no-repeat;
                 transition: .4s;
@@ -120,7 +119,7 @@
             background-size: 100% 100%;
             color: black;
         }
-       
+
 
 
 
@@ -130,15 +129,15 @@
             width: 100%;
             grid-area: main;
             display: grid;
-            grid-template-rows: repeat(2 , 1fr);
+            grid-template-rows: repeat(6 , auto);
             text-align: center;
             padding-top: 150px;
-            background-color:rgb(27, 27, 27) ;
+            background-color:rgb(0, 0, 0) ;
             justify-items: center;
         }
         #users_list h1{
             font-size: 30px;
-            color: #c4b47e;
+            color: #f8e580;
         }
         #ccp_pics{
             margin-top: 50px;
@@ -147,36 +146,36 @@
             align-items: center;
         }
         #ccppicstwo{
-            margin-left: 100px;
+            margin-top: 100px;
         }
         #ccppicsone{
             max-height: 330px;
             overflow: scroll;
         }
         #user_list{
-            margin-top: 70px;
+            margin-top: 5px;
             color: white;
         }
         #user_list h1{
-            color: #c4b47e;
+            color: #f8e580;
         }
         #ccp_list{
             color: white;
         }
         #ccp_list h1{
-            color: #c4b47e;
+            color: #f8e580;
         }
         #table{
             font-family: arial, sans-serif;
             border-collapse: collapse;
             width: 100%;
             margin-top: 20px;
-            font-size: 30px;
+            font-size: 20px;
             color: white;
         }
-          
+
         #table td,#table th {
-            border: 1px solid #9e9165;
+            border: 1px solid #f8e580;
             text-align: right;
             padding: 15px;
         }
@@ -189,7 +188,7 @@
             grid-template-rows: auto auto auto;
             text-align: center;
             padding-top: 200px;
-            background-color:rgb(27, 27, 27) ;
+            background-color:rgb(0, 0, 0) ;
             color: white;
         }
         #system{
@@ -214,7 +213,7 @@
             font-weight: bolder;
             padding: 8px;
             border-radius: 8px;
-            background-color: #f1d299;
+            background-color: #f8e580;
             transition: 0.5s;
         }
         #cardsystembutton:hover{
@@ -238,8 +237,9 @@
             transition: .4s;
         }
         .inputccp:hover{
-            background-color: #9e9165;
+            background-color: #f8e580;
             color: black;
+            cursor: pointer;
         }
 
 
@@ -247,7 +247,7 @@
             display: flex;
             justify-content: right;
           }
-          
+
         .topnav a {
             margin-top: 10px;
             float: left;
@@ -257,18 +257,19 @@
             padding: 14px 16px;
             text-decoration: none;
             font-size: 20px;
-            background-color: rgb(27, 27, 27);
+            background-color: rgb(0, 0, 0);
             z-index: 100;
           }
           .topnav a:hover{
-            background: #9e9165;
+            background: #f8e580;
             border-radius: 10px;
+            color: black;
           }
         .topnav .icon {
             display: none;
             color: white;
           }
-          
+
         @media screen and (max-width: 760px) {
             .topnav a:not(:first-child) {display: none;}
             .topnav a.icon {
@@ -276,7 +277,7 @@
               display: block;
             }
           }
-          
+
         @media screen and (max-width: 760px) {
             .topnav.responsive {position: relative;}
             .topnav.responsive .icon {
@@ -302,29 +303,33 @@
             #logoheader{
                 margin-left: 20px;
             }
-            
+
+          }
+          .searchInput{
+            width: 250px;
+            height: 30px;
+            margin-top: 30px;
           }
 
-    
 
-        
-        
-        
+
+
+
+
     </style>
 </head>
 <body>
     <header>
         <div id="menu">
             <div id="logoheader">
-               
+
             </div>
             <div id="menuheader" class="topnav">
              <a href="">hello Boss</a>
-             <a href="http://nouh.pythonanywhere.com/projet">المشروع الحالي</a>
-             <a href="http://nouh.pythonanywhere.com/boss_info">معلومات المسوقين</a>
-             <a href="http://nouh.pythonanywhere.com/user_benefit">إدارة الأرباح</a>
-             <a href="http://nouh.pythonanywhere.com/boss_user">إضافة مسوق</a>
-             <a href=""><form action="{{ url_for('logout') }}" method="post">
+             <a href="https://www.elkaysar.com/projet">المشروع الحالي</a>
+             <a href="https://www.elkaysar.com/boss_info">معلومات المسوقين</a>
+             <a href="https://www.elkaysar.com/boss_user">إضافة مسوق</a>
+             <a href=""><form action="{{ url_for('logout') | safe }}" method="post">
                 <input id="login" type="submit" value="تسجيل الخروج">
              </form></a>
              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -346,24 +351,73 @@
 
 
     <main>
-        <div id="ccp_list">
-            <h1>CCP</h1>
-            <div id="ccp_pics">
-                <div id="ccppicsone">
-                    {% for img in imgs %}
-                       <img src="{{ url_for('static', filename='img/ccp/' + img ) }}" alt="{{ img }}" width="900px" height="300px" style="border-radius: 10px;">
-                       <hr style="margin-bottom: 30px ; margin-top:30px;">
-                    {% endfor %}
+
+          <div id="user_list">
+             <h1>قائمة العملاء</h1>
+             <div>
+                <input class="searchInput" type="text" id="searchName" onkeyup="searchTable()" placeholder="Search by name...">
+                <input class="searchInput" type="text" id="searchEmail" onkeyup="searchTable()" placeholder="Search by email...">
+                <input class="searchInput" type="text" id="searchNumber" onkeyup="searchTable()" placeholder="Search by number...">
+                    <table id="table">
+                        <thead>
+                          <tr>
+                            <th style="background-color:#f8e580;color:black;border-color: black;">#</th>
+                            <th style="background-color:#f8e580;color:black;border-color: black;">الإسم</th>
+                            <th style="background-color:#f8e580;color:black;border-color: black;">اللقب</th>
+                            <th style="background-color:#f8e580;color:black;border-color: black;">الإيميل</th>
+                            <th style="background-color:#f8e580;color:black;border-color: black;">رقم الهاتف</th>
+                            <th style="background-color:#f8e580;color:black;border-color: black;">الرمز السري</th>
+                            <th style="background-color:#f8e580;color:black;border-color: black;">إرسال المبلغ</th>
+                            <th style="background-color:#f8e580;color:black;border-color: black;">إرسال الملف</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% for name1,name2, email, phone, password, dosi, user_send_money in names %}
+                          <tr>
+                            <td class="row-num"></td>
+                            <td>{{ name1 | safe }}</td>
+                            <td>{{ name2 | safe }}</td>
+                            <td>{{ email | safe }}</td>
+                            <td>{{ phone | safe }}</td>
+                            <td>{{ password | safe }}</td>
+                            <td>{{ user_send_money | safe }}</td>
+                            <td><a href="{{ dosi | safe }}" target="_blank">{{ dosi | safe }}</a></td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                      
+                      
+                      
+                      
+                      
+                    
+                    
+                    
+                    
                 </div>
+          </div>
+
+
+        <div id="ccp_list">
                 <div id="ccppicstwo">
-                    <form action="http://nouh.pythonanywhere.com/admin" method="post">
+                    <form action="https://www.elkaysar.com/admin" method="post" enctype="multipart/form-data">
                        <h1>الإيميل</h1>
                        <input type="text" name="email_from_boss" required placeholder="إيمايل العميل">
-                       <h1>المبلغ المضاف</h1> 
+                       <h1>المبلغ المضاف</h1>
                        <input type="number" name="boss_add_money" placeholder="المبلغ">
                        <br>
                        <br>
-                       <input class="inputccp" type="submit" name="boss_user_control_submit" value="إرسال">
+                       <input type="file" name="user_image">
+                       <br>
+                       <br>
+                       <input style="margin-right: 50px;" class="inputccp" type="submit" name="boss_user_control_submit" value="إضافة إلى الأرباح">
+                       <input class="inputccp" type="submit" name="boss_user_control_submit" value="إضافة إلى رأس المال">
+                       <br>
+                       <br>
+                       <input style="margin-right: 50px;" class="inputccp" type="submit" value="تصفير الأرباح" name="boss_user_control_submit">
+                       <input class="inputccp" type="submit" value="تصفير رأس المال" name="boss_user_control_submit">
+                       <br>
                        <br>
                        <br>
                        <input type="text" name="message" placeholder="أكتب رسالتك هنا">
@@ -374,91 +428,57 @@
                        <h1>حذف المستخدم</h1>
                        <input class="inputccp" type="submit" value="حذف المستخدم" name="boss_user_control_submit">
                        <br>
-                       <h1>تصفير الأرباح</h1>
-                       <input class="inputccp" type="submit" value="تصفير الأرباح" name="boss_user_control_submit">
-                       <br>
-                       <h1>تصفير رأس المال</h1>
-                       <input class="inputccp" type="submit" value="تصفير رأس المال" name="boss_user_control_submit">
-                       <br>
+                       
                        <h1>مدة طلب الأرباح</h1>
                        <input type="number" name="date_take_benifit" placeholder="ضع المدة هنا">
                        <br><br>
                        <input class="inputccp" type="submit" value="مدة طلب الأرباح" name="boss_user_control_submit">
                     </form>
-                    
+
                 </div>
             </div>
 
         </div>
-        <div id="user_list">
-             <h1>قائمة العملاء</h1>
-             <div>
-                    <table id="table">
-                        <thead>
-                            <tr>
-                            <th>الأسماء</th>
-                            <th>الإيميل</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for name, email in names %}
-                            <tr>
-                            <td>{{ name }}</td>
-                            <td>{{ email }}</td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                        
-                    </table>
-             </div>
-        </div>
+       
 
-        <div>
-            <h1 style="margin-bottom: 50px;color:#9e9165;">العملاء الذين ارسلوا الملفات</h1>
-            <ul>
-                {% for file in files %}
-                <li style ="font-size: 25px;color:white;">{{ file }}</li>
-                {% endfor %}
-            </ul>
-        </div>
 
         <div style="margin-top: 70px;">
-            <h1 style="margin-bottom: 50px;color:#9e9165;">العملاء الذين يريدون سحب الأرباح</h1>
+            <h1 style="margin-bottom: 50px;color:#f8e580;">العملاء الذين يريدون سحب الأرباح</h1>
             <table id="table">
                 <tr>
                     <th>إيمايل العميل</th>
                 </tr>
                 {% for row in data %}
                     <tr>
-                        <td>{{ row[0] }}</td>
+                        <td>{{ row[0] | safe }}</td>
                     </tr>
                 {% endfor %}
             </table>
         </div>
 
         <div style="margin-top: 70px;">
-            <h1 style="margin-bottom: 50px;color:#9e9165;">العملاء الذين يريدون سحب رأس المال</h1>
+            <h1 style="margin-bottom: 50px;color:#f8e580;">العملاء الذين يريدون سحب رأس المال</h1>
             <table id="table">
                 <tr>
                     <th>إيمايل العميل</th>
                 </tr>
                 {% for row in sa7b_ras_almal %}
                     <tr>
-                        <td>{{ row[0] }}</td>
+                        <td>{{ row[0] | safe }}</td>
                     </tr>
                 {% endfor %}
             </table>
         </div>
 
         <div style="margin-top: 70px;">
-            <h1 style="margin-bottom: 50px;color:#9e9165;">العملاء الذين يريدون إعادة اسثمار رأس المال</h1>
+            <h1 style="margin-bottom: 50px;color:#f8e580;">العملاء الذين يريدون إعادة اسثمار رأس المال</h1>
             <table id="table">
                 <tr>
                     <th>إيمايل العميل</th>
                 </tr>
                 {% for row in i3adet_istithmer_rasalmal %}
                     <tr>
-                        <td>{{ row[0] }}</td>
+                        <td>{{ row[0] | safe }}</td>
                     </tr>
                 {% endfor %}
             </table>
@@ -466,7 +486,7 @@
 
 
         <div style="margin-top: 70px;">
-            <h1 style="margin-bottom: 50px;color:#9e9165;">رسائل العملاء لتطوير الموقع</h1>
+            <h1 style="margin-bottom: 50px;color:#f8e580;">رسائل العملاء لتطوير الموقع</h1>
             <table id="table">
                 <tr>
                     <th>الرسالة</th>
@@ -474,13 +494,13 @@
                   </tr>
                   {% for row in feedback %}
                     <tr>
-                      <td>{{ row[0] }}</td>
-                      <td>{{ row[1] }}</td>
+                      <td>{{ row[0] | safe }}</td>
+                      <td>{{ row[1] | safe }}</td>
                     </tr>
                   {% endfor %}
             </table>
         </div>
-        
+
     </main>
 
 
@@ -495,22 +515,22 @@
     <script>
         $(document).ready(function(){
             $("a").on('click', function(event) {
-          
+
               if (this.hash !== "") {
                 event.preventDefault();
-          
+
                 var hash = this.hash;
-          
+
                 $('html, body').animate({
                   scrollTop: $(hash).offset().top
                 },800, function(){
-             
+
                   window.location.hash = hash;
                 });
-              } 
+              }
             });
           });
-        
+
           function myFunction() {
             var x = document.getElementById("menuheader");
             if (x.className === "topnav") {
@@ -521,7 +541,39 @@
           }
 
 
-          
+        
+          function searchTable() {
+            let inputName, inputEmail, inputNumber, filterName, filterEmail, filterNumber, table, tr, tdName, tdEmail, tdNumber, i, txtValueName, txtValueEmail, txtValueNumber;
+            inputName = document.getElementById("searchName");
+            inputEmail = document.getElementById("searchEmail");
+            inputNumber = document.getElementById("searchNumber");
+            filterName = inputName.value.toUpperCase();
+            filterEmail = inputEmail.value.toUpperCase();
+            filterNumber = inputNumber.value.toUpperCase();
+            table = document.getElementById("table");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+              tdName = tr[i].getElementsByTagName("td")[2];
+              tdEmail = tr[i].getElementsByTagName("td")[3];
+              tdNumber = tr[i].getElementsByTagName("td")[0];
+              if (tdName && tdEmail && tdNumber) {
+                txtValueName = tdName.textContent || tdName.innerText;
+                txtValueEmail = tdEmail.textContent || tdEmail.innerText;
+                txtValueNumber = tdNumber.textContent || tdNumber.innerText;
+                if (txtValueName.toUpperCase().indexOf(filterName) > -1 && txtValueEmail.toUpperCase().indexOf(filterEmail) > -1 && txtValueNumber.toUpperCase().indexOf(filterNumber) > -1) {
+                  tr[i].style.display = "";
+                } else {
+                  tr[i].style.display = "none";
+                }
+              }
+            }
+          }
+                     
+          const rowNumbers = document.querySelectorAll('.row-num');
+          rowNumbers.forEach((el, index) => {
+            el.textContent = index + 1;
+          });
+
     </script>
 
 
