@@ -18,10 +18,10 @@ html,body{
   height: 100%;
   width: 100%;
   place-items: center;
-  background-image:linear-gradient(to left,#424242,#827753) ;
+  background-image:linear-gradient(to left,#424242,#f8e580) ;
 }
 ::selection{
-  background: #9e9165 ;
+  background: #f8e580 ;
   color: #fff;
 }
 .wrapper{
@@ -136,7 +136,7 @@ form .field input:focus::placeholder{
   margin-top: 5px;
 }
 .form-inner form .signup-link{
-  color: #9e9165;
+  color: #f8e580;
   text-align: center;
   margin-top: 30px;
 }
@@ -161,7 +161,7 @@ form .btn .btn-layer{
   width: 300%;
   position: absolute;
   left: -100%;
-  background: -webkit-linear-gradient(180deg, rgb(27, 27, 27) 30%, #9e9165);
+  background: -webkit-linear-gradient(180deg, rgb(0, 0, 0) 30%, #f8e580);
   border-radius: 5px;
   transition: all 0.4s ease;;
 }
@@ -181,9 +181,15 @@ form .btn input[type="submit"]{
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
+
 }
 .inputcolor{
   filter: opacity(0.7);
+}
+#titre_a{
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
 }
     </style>
   </head>
@@ -194,22 +200,28 @@ form .btn input[type="submit"]{
         <div class="title signup">إفتح حساب</div>
       </div>
       <div class="form-container">
-        
+
         </div>
         <div class="form-inner">
-          
-          <form action="/addaccount_affiliate" method="post" name="passdata" class="signup">
+
+          <form id="emailForm" action="/addaccount_affiliate" method="post" name="passdata" class="signup">
             <div class="field">
-              <input class="inputcolor" name="name" type="text" placeholder="الإسم و اللقب" required>
+              <input class="inputcolor" name="name1" type="text" placeholder="الإسم" required>
+            </div>
+            <div class="field">
+              <input class="inputcolor" name="name2" type="text" placeholder="اللقب" required>
             </div>
             <div class="field">
               <input class="inputcolor" name="password" type="text" placeholder="كلمة المرور" required>
             </div>
             <div class="field">
+              <input class="inputcolor" name="confirm_password" type="text" placeholder="تأكيد كلمة المرور" required>
+            </div>
+            <div class="field">
               <input class="inputcolor" name="dateofbirth" type="date" placeholder="تاريخ الميلاد" required>
             </div>
             <div class="field">
-              <input class="inputcolor" name="email" type="text" placeholder="البريد الإلكتروني" required>
+              <input class="inputcolor" name="email" type="email" placeholder="البريد الإلكتروني" required>
             </div>
             <div class="field">
               <input class="inputcolor" name="phone" type="number" placeholder="رقم الهاتف" required>
@@ -217,20 +229,68 @@ form .btn input[type="submit"]{
             <div class="field">
               <input class="inputcolor" name="adress" type="text" placeholder="العنوان" required>
             </div>
-            <div class="field">
-              <input class="inputcolor" name="cardnumber" type="number" placeholder="عدد الحصص الاستثمارية" required>
-            </div>
-            <input type="hidden" name="boss_name" value="{{ name }}">
+            <input type="hidden" name="boss_name" value="{{ name | safe }}">
             <div class="field btn">
               <div class="btn-layer"></div>
-              <input type="submit" value="افتح الآن">
+              <input type="submit" id="submit-btn" value="افتح الآن" onclick="return checkPasswordMatch();">
             </div>
           </form>
+          <a id="titre_a" href="https://www.elkaysar.com/login" >هل تملك حساب ؟</a>
+          <div id="error-msg"></div>
         </div>
       </div>
     </div>
 
-    
+    <script>
+
+     // Get the form element
+    var form = document.getElementById("emailForm");
+
+    // Add an event listener to the submit event of the form
+    form.addEventListener("submit", function(event) {
+      // Get the name input field
+      var nameInput = form.querySelector('input[name="name"]');
+
+      // Check if the name input field contains only alphabet letters
+      if (!/^[a-zA-Z ]+$/.test(nameInput.value.trim())) {
+        // If the name input field contains non-alphabet characters,
+        // prevent the form from submitting and display an error message
+        alert("يرجى إدخال الأحرف الأبجدية فقط في حقل الاسم");
+        event.preventDefault();
+        return;
+      }
+
+      // Get all the input fields except for the name input field
+      var inputs = form.querySelectorAll('input:not([name="name"])');
+
+      // Check if any of the input fields are empty or contain only whitespace characters
+      for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].value.trim() === "") {
+          // If an input field is empty or contains only whitespace characters,
+          // prevent the form from submitting and display an error message
+          alert("قم بملأ جميع المعلومات و أعد المحاولة");
+          event.preventDefault();
+          return;
+        }
+      }
+    });
+
+      function checkPasswordMatch() {
+      var password = document.getElementsByName("password")[0].value;
+      var confirmPassword = document.getElementsByName("confirm_password")[0].value;
+
+      if (password != confirmPassword) {
+        alert("كلمة المرور لا تتطابق");
+        return false;
+      }
+      return true;
+    }
+
+
+
+  </script>
+
+
 
   </body>
 </html>

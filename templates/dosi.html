@@ -21,7 +21,7 @@
                                  'main'
                                  'footer';
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                
+
         }
         header{
             height: 300px;
@@ -34,7 +34,7 @@
             display: grid;
             grid-template-columns: repeat(2 , auto);
             height: 80px;
-            background-color:rgb(27, 27, 27) ;
+            background-color:rgb(0, 0, 0) ;
             width: 100%;
         }
         #logoheader{
@@ -43,30 +43,32 @@
             clip-path: polygon(50% 100%, 100% 65%, 100% 0, 0 0, 0 65%);
             border: solid;
             border-top: black;
-            border-color: #f1d299;
+            border-color: #f8e580;
             background-image: url(/static/img/logo.jpeg);
             background-size: contain;
             margin-left: 40px;
             z-index: 250;
         }
-       
+
         #title{
             text-align: center;
             z-index: 200;
         }
         #menutitle{
            position: relative;
-           top: -230px;
+           top: -290px;
            color: rgb(196, 196, 196);
            font-size: 23px;
         }
-        
-        #title img{
-            height: 300px;
-            width: 100%;
-            filter: brightness(40%);
+        #menutitle h1{
+            color: black;
         }
-       
+        #title img{
+            height: 400px;
+            width: 100%;
+            
+        }
+
 
 
 
@@ -78,17 +80,17 @@
             grid-area: main;
             display: grid;
             text-align: center;
-            padding-top: 150px;
-            background-color:rgb(27, 27, 27) ;
+            padding-top: 250px;
+            background-color:rgb(0, 0, 0) ;
             color: white;
             justify-content: center;
         }
-       
-        
+
+
         #login{
             color: rgb(211, 209, 209);
             margin-top: -20px;
-            background-color: #9e9165;
+            background-color: #f8e580;
             border-radius: 30px;
             padding: 10px;
             font-size: 20px;
@@ -103,12 +105,12 @@
         }
         #form{
             margin-top: 60px
-        
+
         }
 
 
 
-        
+
 
 
 
@@ -117,7 +119,7 @@
             grid-template-rows: auto auto;
             text-align: center;
             padding-top: 200px;
-            background-color:rgb(27, 27, 27) ;
+            background-color:rgb(0, 0, 0) ;
             color: white;
         }
         #system{
@@ -131,11 +133,11 @@
             display: grid;
             width: 100%;
             grid-template-columns: 1fr 1fr;
-            background-color: #9e91657f;
+            background-color: #f8e6809c;
             margin-top: 100px;
         }
         #input{
-          background-color: #c4b47e;
+          background-color: #f8e580;
           font-size: 20px;
           padding: 5px;
           direction: rtl;
@@ -150,7 +152,7 @@
             margin-top: 20px;
             border-radius: 5px;
             background-color: rgb(87, 87, 87);
-            background-image: linear-gradient(#9e9165,#9e9165);
+            background-image: linear-gradient(#f8e580,#f8e580);
             background-repeat: no-repeat;
             background-size: 0% 100%;
             transition: 0.5s;
@@ -167,7 +169,7 @@
             display: flex;
             justify-content: right;
           }
-          
+
         .topnav a {
             margin-top: 10px;
             float: left;
@@ -177,17 +179,18 @@
             padding: 14px 16px;
             text-decoration: none;
             font-size: 20px;
-            background-color: rgb(27, 27, 27);
+            background-color: rgb(0, 0, 0);
             z-index: 100;
           }
           .topnav a:hover{
-            background-color: #9e9165;
+            background-color: #f8e580;
             border-radius: 10px;
-          } 
+            color: black;
+          }
         .topnav .icon {
             display: none;
           }
-          
+
         @media screen and (max-width: 760px) {
             .topnav a:not(:first-child) {display: none;}
             .topnav a.icon {
@@ -195,7 +198,7 @@
               display: block;
             }
           }
-          
+
         @media screen and (max-width: 760px) {
             .topnav.responsive {position: relative;}
             .topnav.responsive .icon {
@@ -230,12 +233,12 @@
     <header>
         <div id="menu">
             <div id="logoheader">
-               
+
             </div>
             <div id="menuheader" class="topnav">
-                <a href="http://nouh.pythonanywhere.com/home">{{ user_name }}</a>
-             <a href="http://nouh.pythonanywhere.com/deposit">إيداع</a>
-             <a href=""><form action="{{ url_for('logout') }}" method="post">
+             <a href="https://www.elkaysar.com/home">{{ user_name | safe}}</a>
+             <a href="https://www.elkaysar.com">الرئيسية</a>
+             <a href=""><form action="{{ url_for('logout') | safe }}" method="post">
                 <input id="login" type="submit" value="تسجيل الخروج">
              </form></a>
              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -245,7 +248,7 @@
 
         </div>
         <div id="title" >
-                 <img src="/static/img/homepic1.jpg" alt="">
+                 <img src="/static/img/homepic1.jpeg" alt="">
                  <div id="menutitle">
                    <h1 style="margin-bottom: 30px;">
                     أموالك المودعة في أمان
@@ -259,32 +262,26 @@
 
 
     <main >
-        <div id="note" style="margin-bottom: 100px;">
-            <hr>
-            <h1 style="padding: 10px;color:#9e9165;">ملاحظة</h1>
-            <hr>
-            <h2 style="margin-top: 20px;">يرجى عدم إرسال مبلغ إستثمارك حتى يتم إرسال رسالة تأكيد قبول ملفك</h2>
-        </div>
+       
         <div id="dosi">
             <hr>
-            <h1 style="padding: 10px;color:#9e9165;">ارسل صور خاصة بملفك لتكملة التسجيل</h1>
+            <h1 style="padding: 10px;color:#f8e580;">ارسل صور خاصة بملفك لتكملة التسجيل</h1>
             <hr>
             <h2 dir="rtl" style="padding:10px ;">الملف المطلوب :</h2>
             <h3 dir="rtl">* صورة شمسية</h3>
             <h3 dir="rtl">* بطاقة التعريف الوطنية</h3>
-            <h3 dir="rtl">* شهادة ميلاد</h3>
-            <h3 dir="rtl">* شهادة إقامة</h3>
+            <h3 dir="rtl">* وصل إرسال المبلغ </h3>
             <h3 dir="rtl">* شيك مشطوب</h3>
-            <h1 dir="rtl" style="margin-top:15px;color:#9e9165;">ملاحظة : يرجى إرسال الصور مرة واحدة</h1>
         </div>
         <div id="form" style="text-align: right;">
             <form action="#" method="POST" enctype="multipart/form-data" >
-                <h2>الإسم و اللقب</h2><br>
-                <h2 dir="rtl" style="margin-bottom: 10px;">يكتب بهذا الشكل : nom_prenom</h2>
-                <input id="input" type="text" placeholder="الأسم واللقب الخاص بك" name="email"><br>
-                <h2>الصور الخاصة بملفك</h2><br>
-                <input id="input" type="file" name="file" multiple><br>
-                <input id="button" type="submit" value="ارسال">
+                <input type="hidden" name="email" value="{{ user_email | safe }}"><br>
+                <h1>الصور الخاصة بملفك</h1><br>
+                <h3>صورة شمسية</h3><input id="input" type="file" name="file" required><br>
+                <h3>شيك مشطوب</h3><input id="input" type="file" name="file" required><br>
+                <h3>وصل إرسال المبلغ</h3><input id="input" type="file" name="file" required><br>
+                <h3>بطاقة التعريف</h3><input id="input" type="file" name="file" required><br>
+                <input id="button" type="submit" value="إرسال">
             </form>
         </div>
     </main>

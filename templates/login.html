@@ -19,10 +19,10 @@ html,body{
   height: 100%;
   width: 100%;
   place-items: center;
-  background-image:linear-gradient(to left,#424242,#827753) ;
+  background-image:linear-gradient(to left,#424242,#f8e580) ;
 }
 ::selection{
-  background: #9e9165 ;
+  background: #f8e580 ;
   color: #fff;
 }
 .wrapper{
@@ -140,7 +140,7 @@ form .btn .btn-layer{
   width: 300%;
   position: absolute;
   left: -100%;
-  background: -webkit-linear-gradient(180deg, rgb(27, 27, 27) 30%, #9e9165);
+  background: -webkit-linear-gradient(180deg, rgb(0, 0, 0) 30%, #f8e580);
   border-radius: 5px;
   transition: all 0.4s ease;;
 }
@@ -164,6 +164,7 @@ form .btn input[type="submit"]{
 .inputcolor{
   filter: opacity(0.7);
 }
+
     </style>
   </head>
   <body>
@@ -174,12 +175,15 @@ form .btn input[type="submit"]{
       <div class="form-container">
         
         <div class="form-inner">
-          <form action="#" method="post" name="getdata" class="login">
+          <form action="{{ url_for('login') | safe }}" method="post" name="getdata" class="login">
             <div class="field">
               <input class="inputcolor" name="log_email" type="text" placeholder="البريد الإلكتروني" required>
             </div>
             <div class="field">
               <input class="inputcolor" name="log_code" type="password" placeholder="كلمة المرور" required>
+            </div>
+            <div class="field">
+              <a href="{{ url_for('forgot_password') | safe }}" style="color:rgb(255, 255, 255);">نسيت كلمة المرور؟</a>
             </div>
             <div class="field btn">
               <div class="btn-layer"></div>
@@ -190,7 +194,8 @@ form .btn input[type="submit"]{
         </div>
       </div>
     </div>
-
+  </body>
+  
 
   </body>
 </html>

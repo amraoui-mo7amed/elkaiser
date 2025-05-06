@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>رسائلي</title>
+    <style>
+      body{
+        background-color: black;
+        color: #f8e580;
+      }
+      table {
+        width: 100%;
+        border: 1px solid black;
+        color: black;
+        font-size: 20px;
+      }
+      
+      th, td {
+        text-align: left;
+        padding: 8px;
+      }
+      
+      th {
+        background-color: #f8e580;
+        color: rgb(0, 0, 0);
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center;" dir="rtl">رسائلي :</h1>
+    <table>
+      <tr>
+        <th>المرسل</th>
+        <th>الرسالة</th>
+        <th>وقت إرسال الرسالة</th>
+      </tr>
+      {% for message in messages %}
+      <tr>
+        <td>{{ message[1] | safe }}</td>
+        <td>{{ message[3] | safe }}</td>
+        <td>{{ message[4] | safe }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <form style="text-align: center;" action="user_messages" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="email" value="{{ user_email | safe }}"><br>
+      <h3 style="font-size: 25px;">إختر صورة</h3><input style="font-size: 20px;" dir="rtl" type="file" name="one_picture" ><br><br>
+      <input style="font-size: 20px;cursor:pointer;" id="button" type="submit" value="إرسال" name="two_submit"><br><br>
+      <input type="submit" style="font-size: 20px;cursor:pointer;" name="two_submit" value="العودة إلى الصفحة الرئيسية" >
+    </form>
+
+  </body>
+</html>

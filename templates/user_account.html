@@ -22,7 +22,7 @@
                                  'main'
                                  'footer';
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                
+
         }
         header{
             height: 600px;
@@ -36,7 +36,7 @@
             display: grid;
             grid-template-columns: repeat(2 , auto);
             height: 80px;
-            background-color:rgb(27, 27, 27) ;
+            background-color:rgb(0, 0, 0) ;
         }
         #logoheader{
             width: 130px;
@@ -44,7 +44,7 @@
             clip-path: polygon(50% 100%, 100% 65%, 100% 0, 0 0, 0 65%);
             border: solid;
             border-top: black;
-            border-color: #f1d299;
+            border-color: #f8e580;
             background-image: url(/static/img/logo.jpeg);
             background-size: contain;
             margin-left: 40px;
@@ -52,7 +52,7 @@
         }
         #login{
             color: rgb(211, 209, 209);
-            background-color: #9e9165;
+            background-color: #f8e580;
             border-radius: 30px;
             padding: 10px;
             font-size: 20px;
@@ -73,7 +73,7 @@
         #menutitle{
            position: relative;
            top: -400px;
-           color: rgb(196, 196, 196);
+           color: rgb(0, 0, 0);
            font-size: 23px;
         }
         #headerbutton1{
@@ -81,7 +81,7 @@
             padding:10px ;
             width: 200px;
             font-size: 25px;
-            background-color: #c4b47e;
+            background-color: #f8e580;
             font-weight: bolder;
             border-radius: 5px;
         }
@@ -90,14 +90,13 @@
             padding:10px ;
             margin-left: 35px;
             font-size: 25px;
-            background-color: #c4b47e;
+            background-color: #f8e580;
             font-weight: bolder;
             border-radius: 5px;
         }
         #title img{
             height: 522px;
             width: 100%;
-            filter: brightness(40%);
         }
         #headerbutton{
                 margin-top: 120px;
@@ -105,25 +104,27 @@
                 width: 200px;
                 font-size: 25px;
                 color: white;
-                border-color: #c4b47e;
-                background-color: rgb(27, 27, 27);
-                background-image: linear-gradient(#c4b47e , #c4b47e);
+                border-color: #f8e580;
+                background-color: rgb(0, 0, 0);
+                background-image: linear-gradient(#f8e580 , #f8e580);
                 background-size: 0 100%;
                 background-repeat: no-repeat;
                 transition: .4s;
                 font-weight: bolder;
                 border-radius: 5px;
+                filter: opacity(60%);
         }
         #headerbutton:hover{
             background-size: 100% 100%;
             color: black;
+            filter: opacity(100%);
         }
         .topnav {
             margin-right: 40px;
             display: flex;
             justify-content: right;
           }
-          
+
         .topnav a {
             margin-top: 10px;
             float: left;
@@ -133,17 +134,18 @@
             padding: 14px 16px;
             text-decoration: none;
             font-size: 20px;
-            background-color: rgb(27, 27, 27);
+            background-color: rgb(0, 0, 0);
             z-index: 100;
           }
         .topnav a:hover{
-            background-color: #9e9165;
+            background-color: #f8e580;
             border-radius: 10px;
-          } 
+            color: black;
+          }
         .topnav .icon {
             display: none;
           }
-          
+
         @media screen and (max-width: 760px) {
             .topnav a:not(:first-child) {display: none;}
             .topnav a.icon {
@@ -151,7 +153,7 @@
               display: block;
             }
           }
-          
+
         @media screen and (max-width: 760px) {
             .topnav.responsive {position: relative;}
             .topnav.responsive .icon {
@@ -188,51 +190,53 @@
         main{
             grid-area: main;
             display: grid;
-            grid-template-columns: repeat(3 , 1fr);
+            grid-template-rows: repeat(3 , auto);
             text-align: center;
-            padding-top: 150px;
-            background-color:rgb(27, 27, 27) ;
-            justify-items: center;
-            position:relative;
+            padding-top: 50px;
+            background-color:rgb(0, 0, 0) ;
+
         }
-        @media screen and (max-width: 1325px) {
-            main{
-                grid-template-columns: repeat(2 , 1fr);
-            }
-            #boxthree{
-                grid-column: span 2;
-                margin-top: 50px;
-            }
-          }
+
+        #main3{
+          display: grid;
+          grid-template-columns: repeat(3 , 1fr);
+          justify-items: center;
+
+        }
+        #main2{
+          padding-bottom: 80px;
+          text-align: right;
+        }
+
         main h1{
             color: white;
             margin-bottom: 20px;
             font-size: 30px;
         }
         main span{
-          color: #9e9165;
+          color: #f8e580;
           font-size: 25px;
           font-weight: bolder;
         }
         #itemshap1{
-            background-color: #9e9165;
+            background-color: #f8e580;
             width: 300px;
             height: 130px;
             clip-path: polygon(60% 29%, 100% 0, 100% 100%, 0 100%, 0 20%, 20% 70%, 51% 80%);
         }
         #itemshap2{
-            background-color: #9e9165;
+            background-color: #f8e580;
             width: 300px;
             height: 130px;
             clip-path: polygon(82% 50%, 100% 0, 100% 100%, 0 100%, 0 0, 27% 57%, 51% 16%);
         }
         #itemshap3{
-            background-color: #9e9165;
+            background-color: #f8e580;
             width: 300px;
             height: 130px;
             clip-path: polygon(82% 29%, 100% 0, 100% 100%, 0 100%, 0 0, 27% 57%, 51% 16%);
         }
-        
+
         #boxone:hover,#boxtwo:hover,#boxthree:hover {
             animation: shake 0.5s;
           }
@@ -254,8 +258,8 @@
             direction: rtl;
             margin-top: 30px;
             padding: 10px;
-            background-color:rgb(27, 27, 27) ;
-            color: #9e9165;
+            background-color:rgb(0, 0, 0) ;
+            color: #f8e580;
             font-weight: bolder;
           }
           #button2i3ada{
@@ -265,7 +269,7 @@
             border-radius: 7px;
             background-color: rgb(77, 75, 75);
             cursor: pointer;
-            color:#9e9165;
+            color:#f8e580;
           }
           #buttonsa7b{
             margin-top: 25px;
@@ -274,7 +278,7 @@
             border-radius: 7px;
             background-color: rgb(77, 75, 75);
             cursor: pointer;
-            color:#9e9165;
+            color:#f8e580;
           }
           .haha{
             margin-top: 25px;
@@ -283,7 +287,7 @@
             border-radius: 7px;
             background-color: rgb(77, 75, 75);
             cursor: pointer;
-            color:#9e9165;
+            color:#f8e580;
           }
           #button2i3ada_rasmal{
             margin-top: 25px;
@@ -292,9 +296,9 @@
             border-radius: 7px;
             background-color: rgb(77, 75, 75);
             cursor: pointer;
-            color:#9e9165;
+            color:#f8e580;
           }
-          
+
 
 
 
@@ -304,7 +308,7 @@
             grid-template-rows: auto auto auto;
             text-align: center;
             padding-top: 200px;
-            background-color:rgb(27, 27, 27) ;
+            background-color:rgb(0, 0, 0) ;
             color: white;
         }
         #system{
@@ -320,7 +324,7 @@
             display: grid;
             width: 100%;
             grid-template-columns: 1fr 1fr;
-            background-color: #9e91657f;
+            background-color: #f8e680a3;
             margin-top: 100px;
         }
         #cardsystembutton{
@@ -330,38 +334,19 @@
             font-weight: bolder;
             padding: 8px;
             border-radius: 8px;
-            background-color: #f1d299;
+            background-color: #f8e580;
             transition: 0.5s;
         }
         #cardsystembutton:hover{
             width: 300px;
         }
-        #message{
-          background-color:rgb(27, 27, 27) ;
-          color: red ;
-          padding-top: 20px;
-          text-align: center;
-          position: absolute;
-          font-size: 25px;
-          animation-name: message;
-          animation-duration: 0.5s;
-          animation-iteration-count: infinite;
-          
-        }
-        @keyframes message{
-          from{color: red;
-              font-size: 25px;}
-          to{color: rgb(68, 61, 61);
-             font-size: 28px;}
-        }
-        
+
         #message2{
-          background-color:rgb(27, 27, 27) ;
-          color:#9e9165 ;
+          background-color:rgb(0, 0, 0) ;
+          color:#f8e580 ;
           top: 70px;
-          text-align: center;
-          position: absolute;
           font-size: 25px;
+          text-align: right;
         }
         #button_feedback{
             margin-top: 25px;
@@ -370,159 +355,390 @@
             border-radius: 7px;
             background-color: rgb(77, 75, 75);
             cursor: pointer;
-            color:#9e9165;
+            color:#f8e580;
             transition: .6s;
             font-weight: bolder;
             padding: 8px;
         }
         #button_feedback:hover{
-          background-color: #9e9165;
+          background-color: #f8e580;
           color: black;
-          
+
         }
-        
-        
-        
-        
+
+        @media screen and (max-width: 1325px) {
+          #main3{
+              grid-template-columns: repeat(2 , 1fr);
+          }
+          #boxthree{
+              grid-column: span 2;
+              margin-top: 50px;
+              grid-row: 1;
+          }
+
+        }
+        #message_pre{
+          width: 99%;
+          text-align: center;
+          height: 200px;
+          font-size: 20px;
+          color: #f8e580;
+          background-color: black;
+          border: none;
+        }
+
+
+        @media screen and (max-width: 660px) {
+          #main3{
+              grid-template-columns:auto;
+          }
+          #boxthree{
+            grid-column: span 2;
+            margin-top: 50px;
+            grid-row: 1;
+          }
+          #boxtwo{
+            grid-column: span 2;
+            margin-top: 50px;
+            grid-row: 2;
+          }
+          #boxone{
+            grid-column: span 2;
+            margin-top: 50px;
+            grid-row: 3;
+          }
+          #system{
+             width: 300px;
+          }
+          #projet{
+             width: 250px;
+          }
+          #message_pre{
+            text-align: right;
+          }
+
+
+        }
+
+        .ccp_pic{
+          margin-top: 100px;
+        }
+
+        .ccp_pic button{
+          font-size: 20px;
+          padding: 5px;
+          background-color:#f8e580;
+          border-radius: 5px;
+          width: 140px;
+          transition: .4s;
+          cursor: pointer;
+          margin-left: 50px;
+        }
+        .ccp_pic button:hover{
+          width: 180px;
+        }
+
+
+
     </style>
 </head>
 <body>
     <header>
         <div id="menu">
-            <div id="logoheader">
-               
+            <div id="logoheader" onclick="document.location='https://www.elkaysar.com'">
+
             </div>
             <div id="menuheader" class="topnav">
-             <a href="http://nouh.pythonanywhere.com/home">{{first_name}}</a>
-             <a href="http://nouh.pythonanywhere.com/deposit">إيداع</a>
-             <a href="http://nouh.pythonanywhere.com/case">تكملة الملف</a>
-             <a href=""><form action="{{ url_for('logout') }}" method="post">
+             <a href="https://www.elkaysar.com/home">{{first_name | safe}}</a>
+             <a href="https://www.elkaysar.com/user_messages" style="color:red;">{{ count | safe }} الرسائل </a>
+             <a href="https://www.elkaysar.com">الرئيسية</a>
+             <a href="https://www.elkaysar.com/case">تكملة الملف</a>
+             <a href=""><form action="{{ url_for('logout') | safe }}" method="post">
                 <input id="login" type="submit" value="تسجيل الخروج">
              </form></a>
              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
-             </a> 
+             </a>
              </div>
 
         </div>
         <div id="title">
-                 <img src="/static/img/homepic1.jpg" alt="">
+                 <img src="/static/img/homepic1.jpeg" alt="">
                  <div id="menutitle">
                    <h1 style="margin-bottom: 30px;">
-                    أموالك في أمان وتزايدة بشكل مستمر
+                    أموالك في أمان وتزايد بشكل مستمر
                    </h1>
                    <h1 >
                     إستمتع معنا بالأرباح
                    </h1>
-                   <button id="headerbutton">أودع أموالك الآن</button>
+                   <button id="headerbutton" onclick="document.location='https://www.elkaysar.com/case'">أكمل ملفك الآن</button>
                  </div>
         </div>
     </header>
 
-       
+
 
     <main>
+         <div id="main1">
+          <div id="message">
+            <pre>
+              {{ message | safe }}
+            </pre>
+          </div>
+          </div>
+         <div id="main2">
+          <div id="message2" style="text-align: center;">
+            <textarea id="message_pre"  dir="rtl">
+            {{ all_user_message | safe }}
+            </textarea>
+          </div>
+         </div>
 
-         <div id="message">
-          <h3>
-            {{ message }}
-          </h3>
-        </div>
-        <div id="message2">
-          <h3>
-            {{ date_close }}
-          </h3>
-        </div>
 
-        <div id="boxone">
+
+        <div id="main3">
+            <div id="boxone">
               <h1>الرصيد الإجمالي</h1>
-              <h1>{{ money3 }}</h1>
+              <h1>{{ money3 | safe }}</h1>
               <span>دج</span>
               <div id="itemshap1"></div>
-              <h2 dir="rtl" style="width:300px; margin-top:20px;color:#9e9165;">تبق لك مبلغ {{money4}} للوصول إلى 120 مليون سنتيم</h2>
-        </div>
-        <div id="boxtwo">
+              <h2 dir="rtl" style="width:300px; margin-top:20px;color:#f8e580;">تبق لك مبلغ {{money4 | safe}} للوصول إلى 120 مليون سنتيم</h2>
+            </div>
+          <div id="boxtwo">
             <h1>الأرباح</h1>
-            <h1 id="h11">{{ money2 }}</h1>
+            <h1 id="h11">{{ money2 | safe }}</h1>
             <span>دج</span>
             <div id="itemshap2"></div>
-            <form action="{{ url_for('i3adet_istithmer') }}" method="post">
-               <button  id="button2i3ada">إعادة إستثمار الأرباح</button>
+            <form id="myForm" action="{{ url_for('i3adet_istithmer') | safe }}" method="post">
+              <div id="investment-option">
+                {% if money2 and int(money2) >= 10000 %}
+                <label>
+                  <input type="radio" name="investment" value="all" checked>
+                  <p style="color: aliceblue;font-size:20px;"> اعادة إستثمار كل المبلغ</p>
+                </label>
+                <label>
+                  <input type="radio" name="investment" value="part">
+                  <p style="color: aliceblue;font-size:20px;">إستثمار جزء من المبلغ</p>
+                </label>
+                {% endif %}
+              </div>
+              <div id="investment-amount" style="display:none;">
+                <label>
+                  الرجاء اختيار المبلغ الذي تود إستثماره:
+                  <select name="investment-amount-select">
+                    <option value="10000">10000</option>
+                    <option value="20000">20000</option>
+                    <option value="30000">30000</option>
+                    <option value="40000">40000</option>
+                    <option value="50000">50000</option>
+                    <option value="60000">60000</option>
+                    <option value="70000">70000</option>
+                    <option value="80000">80000</option>
+                    <option value="90000">90000</option>
+                    <option value="100000">100000</option>
+                    <option value="110000">110000</option>
+                    <option value="120000">120000</option>
+                    <option value="130000">130000</option>
+                    <option value="140000">140000</option>
+                    <option value="150000">150000</option>
+                    <option value="160000">160000</option>
+                    <option value="170000">170000</option>
+                    <option value="180000">180000</option>
+                    <option value="190000">190000</option>
+                    <option value="200000">200000</option>
+                    <option value="210000">210000</option>
+                    <option value="220000">220000</option>
+                    <option value="230000">230000</option>
+                    <option value="240000">240000</option>
+                    <option value="250000">250000</option>
+                    <option value="260000">260000</option>
+                    <option value="270000">270000</option>
+                    <option value="280000">280000</option>
+                    <option value="290000">290000</option>
+                    <option value="300000">300000</option>
+                    <option value="310000">310000</option>
+                    <option value="320000">320000</option>
+                    <option value="330000">330000</option>
+                    <option value="340000">340000</option>
+                    <option value="350000">350000</option>
+                    <option value="360000">360000</option>
+                    <option value="370000">370000</option>
+                    <option value="380000">380000</option>
+                    <option value="390000">390000</option>
+                    <option value="400000">400000</option>
+                    <option value="410000">410000</option>
+                    <option value="420000">420000</option>
+                    <option value="430000">430000</option>
+                    <option value="440000">440000</option>
+                    <option value="450000">450000</option>
+                    <option value="460000">460000</option>
+                    <option value="470000">470000</option>
+                    <option value="480000">480000</option>
+                    <option value="490000">490000</option>
+                    <option value="500000">500000</option>
+                    <option value="510000">510000</option>
+                    <option value="520000">520000</option>
+                    <option value="530000">530000</option>
+                    <option value="540000">540000</option>
+                    <option value="550000">550000</option>
+                    <option value="560000">560000</option>
+                    <option value="570000">570000</option>
+                    <option value="580000">580000</option>
+                    <option value="590000">590000</option>
+                    <option value="600000">600000</option>
+                    <option value="610000">610000</option>
+                    <option value="620000">620000</option>
+                    <option value="630000">630000</option>
+                    <option value="640000">640000</option>
+                    <option value="650000">650000</option>
+                    <option value="660000">660000</option>
+                    <option value="670000">670000</option>
+                    <option value="680000">680000</option>
+                    <option value="690000">690000</option>
+                    <option value="700000">700000</option>
+                    <option value="710000">710000</option>
+                    <option value="720000">720000</option>
+                    <option value="730000">730000</option>
+                    <option value="740000">740000</option>
+                    <option value="750000">750000</option>
+                    <option value="760000">760000</option>
+                    <option value="770000">770000</option>
+                    <option value="780000">780000</option>
+                    <option value="790000">790000</option>
+                    <option value="800000">800000</option>
+                    <option value="810000">810000</option>
+                    <option value="820000">820000</option>
+                    <option value="830000">830000</option>
+                    <option value="840000">840000</option>
+                    <option value="850000">850000</option>
+                    <option value="860000">860000</option>
+                    <option value="870000">870000</option>
+                    <option value="880000">880000</option>
+                    <option value="890000">890000</option>
+                    <option value="900000">900000</option>
+                    <option value="910000">910000</option>
+                    <option value="920000">920000</option>
+                    <option value="930000">930000</option>
+                    <option value="940000">940000</option>
+                    <option value="950000">950000</option>
+                    <option value="960000">960000</option>
+                    <option value="970000">970000</option>
+                    <option value="980000">980000</option>
+                    <option value="990000">990000</option>
+                    <option value="1000000">1000000</option>
+                    <option value="1010000">1010000</option>
+                    <option value="1020000">1020000</option>
+                    <option value="1030000">1030000</option>
+                    <option value="1040000">1040000</option>
+                    <option value="1050000">1050000</option>
+                    <option value="1060000">1060000</option>
+                    <option value="1070000">1070000</option>
+                    <option value="1080000">1080000</option>
+                    <option value="1090000">1090000</option>
+                    <option value="1100000">1100000</option>
+                    <option value="1110000">1110000</option>
+                    <option value="1120000">1120000</option>
+                    <option value="1130000">1130000</option>
+                    <option value="1140000">1140000</option>
+                    <option value="1150000">1150000</option>
+                    <option value="1160000">1160000</option>
+                    <option value="1170000">1170000</option>
+                    <option value="1180000">1180000</option>
+                    <option value="1190000">1190000</option>
+                    <option value="1200000">1200000</option>
+
+
+                  </select>
+                </label>
+              </div>
+              <button id="button2i3ada" type="submit">إعادة إستثمار الأرباح</button>
             </form>
-            <form action="{{ url_for('sa7b_benifit') }}" method="post">
+
+            <form action="{{ url_for('sa7b_benifit') | safe }}" method="post">
               <button  id="buttonsa7b">سحب الأرباح</button>
            </form>
-        </div>
-        <div id="boxthree">
+          </div>
+          <div id="boxthree">
             <h1>رأس المال</h1>
-            <h1>{{ money1 }}</h1>
+            <h1>{{ money1 | safe }}</h1>
             <span>دج</span>
               <div id="itemshap3"></div>
-              <form action="{{ url_for('sa7b_ras_almal') }}" method="post">
+              <form action="{{ url_for('sa7b_ras_almal') | safe }}" method="post">
                 <button  class="haha">سحب رأس المال</button>
              </form>
-             <form action="{{ url_for('i3adet_ras_almal') }}" method="post">
+             <form action="{{ url_for('i3adet_ras_almal') | safe }}" method="post">
               <button  class="haha" >إعادة إستثمار رأس المال</button>
            </form>
-              
+
+          </div>
+
         </div>
 
-        
+
+
+
     </main>
 
 
 
     <footer>
-          
+
           <div id="system">
-              <h1 style="color: #9e9165;">مشروعك الحالي</h1>
-              <textarea id="projet" cols="80">{{ projet }}</textarea>
+              <h1 style="color: #f8e580;">مشروعك الحالي</h1>
+              <textarea id="projet" cols="80" readonly>{{ projet | safe }}</textarea>
           </div>
 
           <div id="feedback" >
-              <h1 style="color: #9e9165;margin-bottom:30px;">أترك لنا تعليق لتطوير الموقع أكثر</h1>
-              <form action="{{ url_for('submit_feedback') }}" method="post">
-              <textarea style="width:400px;height:120px;border-radius:10px;font-size:25px"  id="feedback" name="feedback"></textarea><br>
+              <h1 style="color: #f8e580;margin-bottom:30px;">أترك لنا تعليق لتطوير الموقع أكثر</h1>
+              <form action="{{ url_for('submit_feedback') | safe }}" method="post">
+              <textarea style="width:300px;height:120px;border-radius:10px;font-size:25px"  id="feedback" name="feedback"></textarea><br>
               <button id="button_feedback">إرسال</button>
               </form>
           </div>
           <div id="video">
-            
+
 
           </div>
 
           <div id="pageend">
-              <div id="contactus" style="padding-top: 70px;">
-                  <h1>إتصل بنا</h1>
-                  <h1>+213656070485</h1>
+              <div id="contactus" style="padding: 20px;">
+                <h1>لاستفساراتكم</h1>
+                <span style="font-size: 20px;">رقم الهاتف</span><br>
+                <span style="font-size: 30px;">+213 656 07 04 85</span><br>
+                <span style="font-size: 30px;">+213 772 40 75 35</span><br>
+                <br>
+                <a href="https://www.facebook.com/profile.php?id=100086995423060&mibextid=ZbWKwL"><img src="/static/img/fb.png" alt="" width="50px"></a>
+                <a href="https://t.me/cesarinvestissement"><img src="/static/img/tele.png" alt="" width="50px"></a>
+                <a href="https://www.instagram.com/cesar_investment/?igshid=YmMyMTA2M2Y="><img src="/static/img/insta.png" alt="" width="50px"></a>
+
               </div>
               <div id="logo">
-                <img src="/static/img/logoback.png" alt="" width="220px">
+                <img src="/static/img/logoback.png" alt="" width="250px">
               </div>
           </div>
     </footer>
 
     <script>
 
-       
+
 
 
 
         $(document).ready(function(){
             $("a").on('click', function(event) {
-          
+
               if (this.hash !== "") {
                 event.preventDefault();
-          
+
                 var hash = this.hash;
-          
+
                 $('html, body').animate({
                   scrollTop: $(hash).offset().top
                 },800, function(){
-             
+
                   window.location.hash = hash;
                 });
-              } 
+              }
             });
           });
 
@@ -535,27 +751,58 @@
             }
         };
 
-        const number = "{{ date_take_benifit }}";
-        const startDate_benifit = new Date("{{ first_date }}");
+        const number = "{{ date_take_benifit | safe }}";
+        const startDate_benifit = new Date("{{ first_date | safe }}");
         const currentDate_benifit = new Date();
         const fortyFiveDaysLater = new Date(startDate_benifit.getTime() + number * 24 * 60 * 60 * 1000);
-        
-        if (currentDate_benifit >= startDate_benifit && currentDate_benifit < fortyFiveDaysLater) {
+
+        if (!(currentDate_benifit >= startDate_benifit && currentDate_benifit < fortyFiveDaysLater && parseInt("{{ money2 | safe }}") === 0)) {
           document.getElementById("button2i3ada").disabled = true;
           document.getElementById("buttonsa7b").disabled = true;
-        }      
-        
+          document.getElementById("button2i3ada").style.color = 'rgb(255, 255, 255)';
+          document.getElementById("buttonsa7b").style.color = 'rgb(255, 255, 255)';
 
-        const startDate = new Date("{{ first_date }}");
+        }else {
+          document.getElementById("button2i3ada").disabled = false;
+          document.getElementById("buttonsa7b").disabled = false;
+
+       }
+
+
+        const startDate = new Date("{{ first_date | safe }}");
         const currentDate = new Date();
         const oneYearLater = new Date(startDate.getTime() + 365 * 24 * 60 * 60 * 1000);
-        
-        if (currentDate >= startDate && currentDate < oneYearLater) {
+
+        if (!(currentDate >= startDate && currentDate < oneYearLater && parseInt("{{ money1 | safe }}") === 0)) {
           document.getElementsByClassName("haha")[0].disabled = true;
           document.getElementsByClassName("haha")[1].disabled = true;
-          document.getElementsByClassName("haha")[0].style.color = 'rgb(38, 38, 38)'
-          document.getElementsByClassName("haha")[1].style.color = 'rgb(38, 38, 38)'
-        }      
+          document.getElementsByClassName("haha")[0].style.color = 'rgb(255, 255, 255)';
+          document.getElementsByClassName("haha")[1].style.color = 'rgb(255, 255, 255)';
+        } else {
+          document.getElementsByClassName("haha")[0].setAttribute("disabled", "false");
+          document.getElementsByClassName("haha")[1].setAttribute("disabled", "false");
+          document.getElementsByClassName("haha")[0].style.color = 'rgb(38, 38, 38)';
+          document.getElementsByClassName("haha")[1].style.color = 'rgb(38, 38, 38)';
+        }
+
+
+
+// Get the investment option radio buttons and the investment amount select element
+  const investmentOption = document.querySelector('#investment-option');
+  const investmentAllRadio = document.querySelector('input[name="investment"][value="all"]');
+  const investmentPartRadio = document.querySelector('input[name="investment"][value="part"]');
+  const investmentAmount = document.querySelector('#investment-amount');
+
+  // Add a change event listener to the investment option radio buttons
+  investmentOption.addEventListener('change', function() {
+    if (investmentPartRadio.checked) {
+      // Show the investment amount select element if the "part" radio button is selected
+      investmentAmount.style.display = 'block';
+    } else {
+      // Hide the investment amount select element if the "all" radio button is selected
+      investmentAmount.style.display = 'none';
+    }
+  });
       </script>
 
 

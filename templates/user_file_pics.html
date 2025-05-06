@@ -22,7 +22,7 @@
                                  'main'
                                  'footer';
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                
+
         }
         header{
             height: 500px;
@@ -35,10 +35,10 @@
             display: grid;
             grid-template-columns: repeat(2 , auto);
             height: 80px;
-            background-color:rgb(27, 27, 27) ;
+            background-color:rgb(0, 0, 0) ;
             width: 100%;
         }
-        
+
         #logoheader{
             width: 130px;
             height: 140px;
@@ -108,7 +108,7 @@
                 font-size: 25px;
                 color: white;
                 border-color: #c4b47e;
-                background-color: rgb(27, 27, 27);
+                background-color: rgb(0, 0, 0);
                 background-image: linear-gradient(#c4b47e , #c4b47e);
                 background-size: 0 100%;
                 background-repeat: no-repeat;
@@ -120,7 +120,7 @@
             background-size: 100% 100%;
             color: black;
         }
-       
+
 
 
 
@@ -132,12 +132,12 @@
             display: grid;
             text-align: center;
             padding-top: 150px;
-            background-color:rgb(27, 27, 27) ;
+            background-color:rgb(0, 0, 0) ;
             justify-items: center;
         }
         #users_list h1{
             font-size: 30px;
-            color: #c4b47e;
+            color: #f8e580;
         }
         #ccp_pics{
             margin-top: 50px;
@@ -157,13 +157,13 @@
             color: white;
         }
         #user_list h1{
-            color: #c4b47e;
+            color: #f8e580;
         }
         #ccp_list{
             color: white;
         }
         #ccp_list h1{
-            color: #c4b47e;
+            color: #f8e580;
         }
         #table{
             font-family: arial, sans-serif;
@@ -172,9 +172,9 @@
             margin-top: 20px;
             font-size: 30px;
         }
-          
+
         #table td,#table th {
-            border: 1px solid #9e9165;
+            border: 1px solid #f8e580;
             text-align: right;
             padding: 15px;
         }
@@ -187,7 +187,7 @@
             grid-template-rows: auto auto auto;
             text-align: center;
             padding-top: 200px;
-            background-color:rgb(27, 27, 27) ;
+            background-color:rgb(0, 0, 0) ;
             color: white;
         }
         #system{
@@ -212,7 +212,7 @@
             font-weight: bolder;
             padding: 8px;
             border-radius: 8px;
-            background-color: #f1d299;
+            background-color: #f8e580;
             transition: 0.5s;
         }
         #cardsystembutton:hover{
@@ -236,7 +236,7 @@
             transition: .4s;
         }
         .inputccp:hover{
-            background-color: #9e9165;
+            background-color: #f8e580;
             color: black;
         }
 
@@ -245,7 +245,7 @@
             display: flex;
             justify-content: right;
           }
-          
+
         .topnav a {
             margin-top: 10px;
             float: left;
@@ -255,7 +255,7 @@
             padding: 14px 16px;
             text-decoration: none;
             font-size: 20px;
-            background-color: rgb(27, 27, 27);
+            background-color: rgb(0, 0, 0);
             z-index: 100;
           }
           .topnav a:hover{
@@ -266,7 +266,7 @@
             display: none;
             color: white;
           }
-          
+
         @media screen and (max-width: 760px) {
             .topnav a:not(:first-child) {display: none;}
             .topnav a.icon {
@@ -274,7 +274,7 @@
               display: block;
             }
           }
-          
+
         @media screen and (max-width: 760px) {
             .topnav.responsive {position: relative;}
             .topnav.responsive .icon {
@@ -300,29 +300,29 @@
             #logoheader{
                 margin-left: 20px;
             }
-            
+
           }
 
-    
 
-        
-        
-        
+
+
+
+
     </style>
 </head>
 <body>
     <header>
         <div id="menu">
             <div id="logoheader">
-               
+
             </div>
             <div id="menuheader" class="topnav">
              <a href="">hello Boss</a>
-             <a href="http://nouh.pythonanywhere.com/projet">المشروع الحالي</a>
-             <a href="http://nouh.pythonanywhere.com/boss_info">معلومات المسوقين</a>
-             <a href="http://nouh.pythonanywhere.com/user_benefit">إدارة الأرباح</a>
-             <a href="http://nouh.pythonanywhere.com/boss_user">إضافة مسوق</a>
-             <a href=""><form action="{{ url_for('logout') }}" method="post">
+             <a href="https://www.elkaysar.com/projet">المشروع الحالي</a>
+             <a href="https://www.elkaysar.com/boss_info">معلومات المسوقين</a>
+             <a href="https://www.elkaysar.com/user_benefit">إدارة الأرباح</a>
+             <a href="https://www.elkaysar.com/boss_user">إضافة مسوق</a>
+             <a href=""><form action="{{ url_for('logout') | safe }}" method="post">
                 <input id="login" type="submit" value="تسجيل الخروج">
              </form></a>
              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -344,15 +344,19 @@
 
 
     <main>
-        
-        <h1 style="margin-bottom: 50px;">{{ file_name }}</h1>
-        <ul>
-          {% for image_name in image_names %}
-            <li><a href="{{ url_for('download_image', file_name=file_name, image_name=image_name) }}">{{ image_name }}</a></li>
-          {% endfor %}
-        </ul>
-            
-        
+
+         <h1 style="margin-bottom: 50px;">{{ file_name | safe }}</h1>
+         <ul>
+            {% for image_name in image_names %}
+              <li>
+                <a href="{{ url_for('download_image', file_name=file_name, image_name=image_name) }}" download>
+                  <img src="{{ url_for('static', filename='img/user_case/' + file_name + '/' + image_name) }}" alt="{{ image_name }}" style="max-width: 300px; max-height: 300px;">
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+
+
     </main>
 
 
@@ -365,7 +369,7 @@
     </footer>
 
     <script>
-        
+
           function myFunction() {
             var x = document.getElementById("menuheader");
             if (x.className === "topnav") {

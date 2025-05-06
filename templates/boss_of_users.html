@@ -22,7 +22,7 @@
                                  'main'
                                  'footer';
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                
+
         }
         header{
             height: 500px;
@@ -36,7 +36,7 @@
             display: grid;
             grid-template-columns: repeat(2 , auto);
             height: 80px;
-            background-color:rgb(27, 27, 27) ;
+            background-color:rgb(0, 0, 0) ;
         }
         #logoheader{
             width: 130px;
@@ -44,7 +44,7 @@
             clip-path: polygon(50% 100%, 100% 65%, 100% 0, 0 0, 0 65%);
             border: solid;
             border-top: black;
-            border-color: #f1d299;
+            border-color: #f8e580;
             background-image: url(/static/img/logo.jpeg);
             background-size: contain;
             margin-left: 120px;
@@ -53,7 +53,7 @@
         #login{
             color: rgb(211, 209, 209);
             margin-top: -20px;
-            background-color: #9e9165;
+            background-color: #f8e580;
             border-radius: 30px;
             padding: 10px;
             font-size: 20px;
@@ -79,7 +79,6 @@
         #title img{
             height: 422px;
             width: 100%;
-            filter: brightness(40%);
         }
 
 
@@ -89,7 +88,7 @@
             display: grid;
             text-align: center;
             padding-top: 150px;
-            background-color:rgb(27, 27, 27) ;
+            background-color:rgb(0, 0, 0) ;
             justify-items: center;
         }
         #userboss_input{
@@ -109,8 +108,8 @@
             color: aliceblue;
         }
         #userboss_submit:hover{
-            background-color: #9e9165;
-            
+            background-color: #f8e580;
+
         }
         #table{
             font-family: arial, sans-serif;
@@ -121,15 +120,15 @@
             color: aliceblue;
             direction: rtl;
         }
-          
+
         #table td,#table th {
-            border: 1px solid #9e9165;
+            border: 1px solid #f8e580;
             text-align: center;
             padding: 15px;
         }
 
-        
-        
+
+
 
 
 
@@ -138,23 +137,23 @@
             display: grid;
             text-align: center;
             padding-top: 200px;
-            background-color:rgb(27, 27, 27) ;
+            background-color:rgb(0, 0, 0) ;
             color: white;
         }
         #pageend{
             display: grid;
             width: 100%;
             grid-template-columns: 1fr 1fr;
-            background-color: #9e91657f;
+            background-color: #baac807f;
             margin-top: 100px;
         }
-       
+
         .topnav {
             margin-right: 40px;
             display: flex;
             justify-content: right;
           }
-          
+
         .topnav a {
             margin-top: 10px;
             float: left;
@@ -164,17 +163,17 @@
             padding: 14px 16px;
             text-decoration: none;
             font-size: 20px;
-            background-color: rgb(27, 27, 27);
+            background-color: rgb(0, 0, 0);
             z-index: 100;
           }
           .topnav a:hover{
-            background-color: #9e9165;
+            background-color: #f8e580;
             border-radius: 10px;
-          } 
+          }
         .topnav .icon {
             display: none;
           }
-          
+
         @media screen and (max-width: 760px) {
             .topnav a:not(:first-child) {display: none;}
             .topnav a.icon {
@@ -182,7 +181,7 @@
               display: block;
             }
           }
-          
+
         @media screen and (max-width: 760px) {
             .topnav.responsive {position: relative;}
             .topnav.responsive .icon {
@@ -209,9 +208,9 @@
                 margin-left: 20px;
             }
           }
-        
-        
-        
+
+
+
     </style>
 </head>
 <body>
@@ -221,10 +220,10 @@
             </div>
             <div id="menuheader" class="topnav">
              <a href="">hello Boss</a>
-             <a href="http://nouh.pythonanywhere.com/admin">صفحة المدير</a>
-             <a href="http://nouh.pythonanywhere.com/projet">المشروع الحالي</a>
-             <a href="http://nouh.pythonanywhere.com/boss_info">معلومات المسوقين</a>
-             <a href=""><form action="{{ url_for('logout') }}" method="post">
+             <a href="https://www.elkaysar.com/admin">صفحة المدير</a>
+             <a href="https://www.elkaysar.com/projet">المشروع الحالي</a>
+             <a href="https://www.elkaysar.com/boss_info">معلومات المسوقين</a>
+             <a href=""><form action="{{ url_for('logout') | safe }}" method="post">
                 <input id="login" type="submit" value="تسجيل الخروج">
              </form></a>
              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -245,7 +244,7 @@
     <main>
         <div id="userboss">
             <form action="#" method="post" name="pass_boss">
-                <h1 style="font-size: 30px;color:#9e9165;">اضافة مسوق</h1>
+                <h1 style="font-size: 30px;color:#f8e580;">اضافة مسوق</h1>
                 <input id="userboss_input" type="text" name="name" placeholder="الاسم واللقب" required dir="rtl">
                 <br>
                 <input id="userboss_submit" type="submit" value="إضافة">
@@ -253,21 +252,22 @@
 
         </div>
         <div id="boss_table">
-            <h1 style="color: #9e9165;margin-top:70px;">قائمة المسوقين</h1>
+            <h1 style="color: #f8e580;margin-top:70px;">قائمة المسوقين</h1>
             <table id="table">
                 <thead>
                     <tr>
-                    <th>اسم المسوق</th>
+                        <th>#</th>
+                        <th>اسم المسوق</th>
                     </tr>
                 </thead>
                 <tbody>
-                        {% for table_name in table_names %}
-                        <tr>
-                          <td>{{ table_name }}</td>
-                        </tr>
-                        {% endfor %}
+                    {% for table_name in table_names %}
+                    <tr>
+                        <td class="row-num"></td>
+                        <td>{{ table_name | safe }}</td>
+                    </tr>
+                    {% endfor %}
                 </tbody>
-                
             </table>
      </div>
     </main>
@@ -281,7 +281,7 @@
         </div>
   </footer>
 
-   
+
   <script>
     function myFunction() {
       var x = document.getElementById("menuheader");
@@ -290,6 +290,12 @@
       } else {
         x.className = "topnav";
       }
+    }
+
+
+    const rowNumbers = document.querySelectorAll('#table tbody tr');
+    for (let i = 0; i < rowNumbers.length; i++) {
+        rowNumbers[i].querySelector('.row-num').textContent = i + 1;
     }
   </script>
 

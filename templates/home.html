@@ -22,7 +22,7 @@
         grid-template-areas: 'header'
                              'main';
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            
+
     }
     header{
         height: 700px;
@@ -36,7 +36,7 @@
         display: grid;
         grid-template-columns: repeat(2 , auto);
         height: 80px;
-        background-color:rgb(27, 27, 27) ;
+        background-color:rgb(0, 0, 0) ;
     }
     #logoheader{
         width: 130px;
@@ -44,7 +44,7 @@
         clip-path: polygon(50% 100%, 100% 65%, 100% 0, 0 0, 0 65%);
         border: solid;
         border-top: black;
-        border-color: #f1d299;
+        border-color: #f8e580;
         background-image: url(/static/img/logo.jpeg);
         background-size: contain;
         margin-left: 40px;
@@ -52,7 +52,7 @@
     }
     #login{
         color: rgb(0, 0, 0);
-        background-color: #9e9165;
+        background-color: #f8e580;
         border-radius: 30px;
         padding: 10px;
         font-size: 20px;
@@ -60,10 +60,10 @@
         cursor: pointer;
         padding-top: 15px;
         transition: .4s;
-       
+
     }
     #login:hover{
-        background-color: #e2cd88;
+        background-color: #f8e580;
         color: #000000;
     }
     #title{
@@ -73,53 +73,58 @@
     #menutitle{
        position: relative;
        top: -470px;
-       color: rgb(196, 196, 196);
+       color: rgb(0, 0, 0);
        font-size: 23px;
-       
     }
+    
     #headerbutton1{
         color: white;
-        padding:10px ;
+        padding-top:10px ;
+        padding-bottom: 10px;
         width: 200px;
         font-size: 25px;
         font-weight: bolder;
         border-radius: 5px;
-        border-color: #c4b47e;
+        border-color: #f8e580;
         background-color: rgb(27, 27, 27);
-        background-image: linear-gradient(#c4b47e , #c4b47e);
+        background-image: linear-gradient(#f8e580 , #f8e580);
         background-size: 0 100%;
         background-repeat: no-repeat;
         transition: .4s;
         font-weight: bolder;
         margin-top: 100px;
         cursor: pointer;
+        filter: opacity(70%);
     }
     #headerbutton2{
+        width: 200px;
         color: white;
-        padding:10px ;
+        padding-top:10px ;
+        padding-bottom: 10px;
         margin-left: 35px;
         font-size: 25px;
         font-weight: bolder;
         border-radius: 5px;
-        border-color: #c4b47e;
-        background-color: rgb(27, 27, 27);
-        background-image: linear-gradient(#c4b47e , #c4b47e);
+        border-color: #f8e580;
+        background-color: rgb(31, 30, 30);
+        background-image: linear-gradient(#f8e580 , #f8e580);
         background-size: 0 100%;
         background-repeat: no-repeat;
         transition: .4s;
         font-weight: bolder;
         cursor: pointer;
+        filter: opacity(70%);
     }
     #headerbutton1:hover,#headerbutton2:hover{
         background-size: 100% 100%;
         color: black;
+        filter: opacity(100%);
     }
     #title img{
         height: 622px;
         width: 100%;
-        filter: brightness(40%);
     }
-    
+
     .topnav {
         margin-right: 40px;
         display: flex;
@@ -134,17 +139,18 @@
         padding: 14px 16px;
         text-decoration: none;
         font-size: 20px;
-        background-color: rgb(27, 27, 27);
+        background-color: rgb(0, 0, 0);
         z-index: 100;
       }
       .topnav a:hover{
-        background-color: #9e9165;
+        background-color: #f8e580;
         border-radius: 10px;
-      } 
+        color: black;
+      }
     .topnav .icon {
         display: none;
       }
-      
+
     @media screen and (max-width: 760px) {
         .topnav a:not(:first-child) {display: none;}
         .topnav a.icon {
@@ -152,7 +158,7 @@
           display: block;
         }
       }
-      
+
     @media screen and (max-width: 760px) {
         .topnav.responsive {position: relative;}
         .topnav.responsive .icon {
@@ -180,7 +186,7 @@
         }
       }
 
-     
+
 
     main{
         width: 100%;
@@ -190,7 +196,7 @@
     #stepsdiv{
         display: grid;
         grid-template-rows: repeat(2 , auto);
-        background-color:rgb(27, 27, 27);
+        background-color:rgb(0, 0, 0);
         padding-bottom: 20px;
     }
     #titlesteps{
@@ -225,7 +231,7 @@
         padding: 10px;
         font-size: 20px;
         font-weight: bolder;
-        background-color: #a5986c;
+        background-color: #f8e580;
         border-radius: 5px;
         box-shadow:  10px 10px 10px;
         transition: 0.3s;
@@ -233,29 +239,19 @@
     }
     #threesteps button:hover{
         width: 180px;
-        background-color: #eed47d;
+        background-color: #ffe346;
     }
     .stepsborder{
-        border-bottom: 10px solid #8d8056 ;
+        border-bottom: 10px solid #f8e580 ;
         border-radius: 5px;
         box-shadow: 10px 10px 15px;
         transition: .4s;
         cursor: pointer;
     }
     .stepsborder:hover{
-        border-bottom: 10px solid #ffe79a ;
+        border-bottom: 10px solid #ffe346 ;
         scale: 1.2;
     }
-    @media screen and (max-width: 1325px) {
-        #threesteps{
-            grid-template-columns: repeat(2 , 1fr);
-            
-        }
-        .step3{
-            grid-column: span 2;
-            margin-top: 50px;
-        }
-      }
 
 
 
@@ -263,7 +259,7 @@
 
 
     #whyusdiv{
-        background-color: rgb(27, 27, 27);
+        background-color: rgb(0, 0, 0);
         text-align: center;
         padding: 150px;
         color: white;
@@ -277,12 +273,12 @@
         font-size: 20px;
         z-index: 555;
     }
-    
+
     #whyfire1{
         position: absolute;
         left: 15%;
         top: 200px;
-        filter: opacity(40%);
+        filter: opacity(60%);
     }
 
 
@@ -292,21 +288,21 @@
     #workdiv{
         display: grid;
         grid-template-columns:repeat(2 , auto) ;
-        background-color:rgb(27, 27, 27);
+        background-color:rgb(0, 0, 0);
         padding-top: 50px;
     }
     #worklist{
         display: grid;
         grid-template-rows: repeat(5 , 1fr);
         justify-content: right;
-        
+
     }
     .work1{
         display: grid;
         grid-template-columns: repeat(2 , 1fr);
         width: 500px;
         text-align: center;
-        border: solid #c4b47e ;
+        border: solid #f8e580 ;
         margin-bottom: 20px;
         border-radius: 10px;
         transition: .5s;
@@ -314,23 +310,23 @@
     }
     .work1:hover{
         margin-left: 100px;
-        background-color: #9e9165;
+        background-color: #e2cc5154;
     }
     .work2:hover{
         margin-left: 100px;
-        background-color: #9e9165;
+        background-color: #e2cc5154;
     }
     .work3:hover{
         margin-left: 100px;
-        background-color: #9e9165;
+        background-color: #e2cc5154;
     }
     .work4:hover{
         margin-left: 100px;
-        background-color: #9e9165;
+        background-color: #e2cc5154;
     }
     .work5:hover{
         margin-left: 100px;
-        background-color: #9e9165;
+        background-color: #e2cc5154;
     }
     .work1::before{
         width: 50px;
@@ -338,7 +334,7 @@
         font-size: 35px;
         text-align: center;
         content: '1';
-        background-color: #c4b47e;
+        background-color: #f8e580;
         font-weight: bolder;
         margin-left: 5px;
         margin-top: 5px;
@@ -355,7 +351,7 @@
         grid-template-columns: repeat(2 , 1fr);
         width: 500px;
         text-align: center;
-        border: solid #c4b47e ;
+        border: solid #f8e580 ;
         margin-bottom: 20px;
         border-radius: 10px;
         transition: .5s;
@@ -366,7 +362,7 @@
         grid-template-columns: repeat(2 , 1fr);
         width: 500px;
         text-align: center;
-        border: solid #c4b47e ;
+        border: solid #f8e580 ;
         margin-bottom: 20px;
         border-radius: 10px;
         transition: .5s;
@@ -377,7 +373,7 @@
         grid-template-columns: repeat(2 , 1fr);
         width: 500px;
         text-align: center;
-        border: solid #c4b47e ;
+        border: solid #f8e580 ;
         margin-bottom: 20px;
         border-radius: 10px;
         transition: .5s;
@@ -388,7 +384,7 @@
         grid-template-columns: repeat(2 , 1fr);
         width: 500px;
         text-align: center;
-        border: solid #c4b47e ;
+        border: solid #f8e580 ;
         margin-bottom: 20px;
         border-radius: 10px;
         transition: .5s;
@@ -400,7 +396,7 @@
         font-size: 35px;
         text-align: center;
         content: '2';
-        background-color: #c4b47e;
+        background-color: #f8e580;
         font-weight: bolder;
         margin-left: 5px;
         margin-top: 5px;
@@ -412,7 +408,7 @@
         font-size: 35px;
         text-align: center;
         content: '3';
-        background-color: #c4b47e;
+        background-color: #f8e580;
         font-weight: bolder;
         margin-left: 5px;
         margin-top: 5px;
@@ -424,7 +420,7 @@
         font-size: 35px;
         text-align: center;
         content: '4';
-        background-color: #c4b47e;
+        background-color: #f8e580;
         font-weight: bolder;
         margin-left: 5px;
         margin-top: 5px;
@@ -436,7 +432,7 @@
         font-size: 35px;
         text-align: center;
         content: '5';
-        background-color: #c4b47e;
+        background-color: #f8e580;
         font-weight: bolder;
         margin-left: 5px;
         margin-top: 5px;
@@ -465,7 +461,7 @@
         font-weight: bolder;
         padding: 8px;
         border-radius: 8px;
-        background-color: #f1d299;
+        background-color: #f8e580;
         transition: 0.5s;
     }
     #systembutton:hover{
@@ -477,18 +473,18 @@
     #gpsdiv2{
         display: flex;
         justify-content: center;
-        background-color:rgb(27, 27, 27) ;
+        background-color:rgb(0, 0, 0) ;
         text-align: center;
     }
     #gpsdiv:hover{
-        background-color:#f0d682 ;
+        background-color:#f8e580 ;
         cursor: pointer;
     }
     #gpsdiv{
         display: grid;
         grid-template-columns: repeat(2 , 1fr);
         color: rgb(0, 0, 0);
-        background-color:#9e9165 ;
+        background-color:#f8e580 ;
         padding: 50px;
         border-radius: 80px;
         max-width: 1000px;
@@ -522,6 +518,12 @@
     #systemh3{
         font-size: 20px;
     }
+    #limada{
+        line-height: 2;
+        width:100% ;
+        font-size:25px;
+        margin-top:20px;
+    }
 
 
 
@@ -533,12 +535,20 @@
 
     @media screen and (max-width: 1325px) {
         #threesteps{
+            direction: rtl;
             grid-template-columns: repeat(2 , 1fr);
         }
         .step3{
             grid-column: span 2;
             margin-top: 50px;
         }
+        .step1 {
+            grid-row: 1 ;
+          }
+
+        .step3 {
+            grid-row: 2 ;
+          }
         #gpsdiv{
             grid-template-columns: repeat(1 , 1fr);
         }
@@ -569,6 +579,14 @@
             grid-column: span 1;
             margin-top: 50px;
         }
+        .step1 {
+            grid-row: 1;
+            margin-bottom: 50px;
+          }
+
+        .step3 {
+            grid-row: 3 ;
+          }
         #whyusdiv h1{
             font-size: 25px;
         }
@@ -589,48 +607,139 @@
         #threesteps div{
             padding-left: 0;
         }
+        .work1{
+            width: 300px;
+        }
+        .work2{
+            width: 300px;
+        }
+        .work3{
+            width: 300px;
+        }
+        .work4{
+            width: 300px;
+        }
+        .work5{
+            width: 300px;
+        }
+        #limada{
+            line-height: 1.5;
+
+            font-size:25px;
+            margin-top:20px;
+        }
+        #whyusdiv{
+            padding: 10px;
+            padding-top: 80px;
+        }
+        .stepsborder{
+            width: 300px;
+        }
+        #titlesteps{
+            font-size: 20px;
+        }
+        #headerbutton1{
+            width: 140px;
+        }
+        #headerbutton2{
+            width: 140px;
+            margin-left: 20px;
+        }
+      }
+      @media screen and (max-width: 690px){
+        .work1{
+            width: 260px;
+        }
+        .work2{
+            width: 260px;
+        }
+        .work3{
+            width: 260px;
+        }
+        .work4{
+            width: 260px;
+        }
+        .work5{
+            width: 260px;
+        }
       }
 
       #text_from_admin{
-        background-color: rgb(27, 27, 27);
+        background-color: rgb(0, 0, 0);
         font-size: 30px;
         direction: rtl;
-        color: #8d8056;
+        color: #f8e580;
         padding-top: 100px;
         text-align: center;
       }
+
+      #pic_from_admin{
+        text-align: center;
+        padding-top: 100px;
+        background-color: #000000;
+      }
+
+      #home_text{
+        text-align: center;
+        overflow:hidden;
+        font-size: 25px;
+        color: #f8e580;
+        background-color: #000000;
+        border: none;
+        resize: none;
+        height: 100%;
+        min-height: 100px;
+        width: 80%;
+      }
+      #iframe-wrapper {
+        width: 100%;
+        height: 500px;
+        text-align: center;
+        background-color: #000000;
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+      #iframe-wrapper iframe {
+        width: 60%;
+        height: 100%;
+      }
+      #video_from_admin{
+        text-align: center;
+        background-color: #000000;
+      }
+      
+
 
 </style>
 <body>
     <header>
         <div id="menu">
-            <div id="logoheader">
-               
+            <div id="logoheader" onclick="document.location='https://www.elkaysar.com'">
+
             </div>
             <div id="menuheader" class="topnav">
-            <a href="#gpsdiv2">إتصل بنا</a> 
-            <a href="#system">البطاقات</a> 
+            <a href="#gpsdiv2">إتصل بنا</a>
             <a href="#whyusdiv">لماذا نحن</a>
             <a href="#stepsdiv">كيف ابدأ</a>
-            <a href="http://elkaysar.com/">الرئيسية</a>
-            <a id="login" href="http://elkaysar.com/login">تسجيل الدخول</a>
+            <a href="https://www.elkaysar.com">الرئيسية</a>
+            <a id="login" href="https://www.elkaysar.com/login">تسجيل الدخول</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
-            </a>        
+            </a>
             </div>
 
         </div>
         <div id="title">
-                 <img src="/static/img/homepic.jpg" alt="">
+                 <img src="/static/img/homepic.jpeg" alt="">
                  <div id="menutitle">
                    <h1 style="margin-bottom: 30px;">
-                    منصة للإستثمار 
+                    منصة للإستثمار
                    </h1>
-                   <h1 >
+                   <h1>
                     شغل أموالك معنا الآن
                    </h1>
-                   <button id="headerbutton1" onclick="document.location='http://elkaysar.com/'"  >إنشاء حساب</button>
-                   <button id="headerbutton2" onclick="document.location='http://elkaysar.com/login'">تسجيل الدخول</button>
+                   <button id="headerbutton1" onclick="document.location='https://www.elkaysar.com/addaccount'"  >إنشاء حساب</button>
+                   <button id="headerbutton2" onclick="document.location='https://www.elkaysar.com/login'">تسجيل الدخول</button>
                  </div>
         </div>
 
@@ -642,38 +751,38 @@
              </div>
              <div id="threesteps">
 
-                <div>
-                    <img class="stepsborder" src="/static/img/stepsthree.jpg" alt="" width="350px" height="220px">
+                <div class="step3">
+                    <img class="stepsborder" src="/static/img/stepstwo.jpeg" alt="" width="350px" height="220px">
                     <h1>الحصول على الأرباح</h1>
                     <h3>أدخل الى حسابك وتفقد</h3>
                     <h3>أرباحك واسحبها</h3>
-                    <button onclick="document.location='http://elkaysar.com/login'">تسجيل الدخول</button>
+                    <button onclick="document.location='https://www.elkaysar.com/login'">تسجيل الدخول</button>
                  </div>
-                 <div>
-                    <img class="stepsborder" src="/static/img/stepstwo.jpg" alt="" width="350px" height="220px">
+                 <div class="step2">
+                    <img class="stepsborder" src="/static/img/step.jpeg" alt="" width="350px" height="220px">
                     <h1>قم بالإيداع الان</h1>
                     <h3>أدخل الى حسابك الان</h3>
                     <h3>وانظم الى مشروعنا الجديد</h3>
-                    <button onclick="document.location='http://elkaysar.com/login'">تسجيل الدخول</button>
+                    <button onclick="document.location='https://www.elkaysar.com/login'">تسجيل الدخول</button>
                  </div>
-                 <div class="step3">
-                    <img class="stepsborder" src="/static/img/stepsone.jpg" alt="" width="350px" height="220px">
+                 <div class="step1">
+                    <img class="stepsborder" src="/static/img/stepsone.jpeg" alt="" width="350px" height="220px">
                     <h1>شغل أموالك على الفور</h1>
                     <h3>قم بالتسجيل في المنصة</h3>
                     <h3>وأحصل على فرصتك الان</h3>
-                    <button onclick="document.location='http://elkaysar.com/login'">سجل الان</button>
+                    <button onclick="document.location='https://www.elkaysar.com/login'">سجل الان</button>
                  </div>
-                 
-                 
+
+
              </div>
         </div>
         <div id="whyusdiv">
             <img id="whyfire1" src="/static/img/whyfire1.png" alt="">
              <h1>لماذا نحن ؟</h1>
-             <p style="line-height: 2;width:100%; font-size:25px;margin-top:20px;">نحن شركة القيصر للاستثمار وتوظيف الأموال نعمل على تجسيد مشاريع حقيقية على أرض الواقع ونقدم لك ارباحا ملموسة من خلال 
+             <p id="limada">نحن شركة القيصر للاستثمار وتوظيف الأموال نعمل على تجسيد مشاريع حقيقية على أرض الواقع ونقدم لك ارباحا ملموسة من خلال
 استثمار اموالك في مجالات متنوعة اهمهاالزراعة والصناعة بحيث يسهر على تجسيد مشاريعنا فريق من الخبراء كل بحسب تخصصه وكفائته.
 من خلال اشتراكك في موقعنا يمكنك دخول عالم الاستثمار والشراكة
-في احد مشاريعنا وذلك بنظام الصناديق الإستثمارية ،وهذا مايسمح لك بالحصول على بطاقتك الإستثمارية وأرباحك بطريقة شرعية. 
+في احد مشاريعنا وذلك بنظام الصناديق الإستثمارية ،وهذا مايسمح لك بالحصول على بطاقتك الإستثمارية وأرباحك بطريقة شرعية.
 نحن لا نعدك بالربح المضمون ولكننا نعدك بالاجتهاد والسعي في دراسة المشاريع وتجسيدها كما يلزم من اجل الحصول على أفضل النتائج
 </p>
         </div>
@@ -685,53 +794,53 @@
                   <div class="work1">
                       <div class="work1title">
                          <h1 style="color: white;">الخبرة والكفاءة</h1>
-                         
+
                       </div>
                       <div class="work1pic">
                           <img src="/static/img/work1.png" alt="" width="60px" style="margin-top: 10px;">
                       </div>
                       <h3 style="color: #f1d299;margin-top:15px;">نوظف خبرتنا في استثمار الأموال دون مخاطر</h3>
-                      
+
                   </div>
                   <div class="work2">
                     <div class="work1title">
                         <h1 style="color: white;">إستثمار آمن وحلال</h1>
-                        
+
                      </div>
                      <div class="work1pic">
                          <img src="/static/img/work2.png" alt="" width="60px" style="margin-top: 10px;">
                      </div>
-                     <h3 style="color: #f1d299;margin-top:15px;">نتحرى الصدق والأمانة والحلال في أعمالنا</h3>
+                     <h3 style="color: #f8e580;margin-top:15px;">نتحرى الصدق والأمانة والحلال في أعمالنا</h3>
                   </div>
                   <div class="work3">
                     <div class="work1title">
                         <h1 style="color: white;">منصة بسيطة</h1>
-                        
+
                      </div>
                      <div class="work1pic">
                          <img src="/static/img/work3.png" alt="" width="60px" style="margin-top: 10px;">
                      </div>
-                     <h3 style="color: #f1d299;margin-top:15px;">لوحة تحكم في غاية السهولة والبساطة</h3>
+                     <h3 style="color: #f8e580;margin-top:15px;">لوحة تحكم في غاية السهولة والبساطة</h3>
                   </div>
                   <div class="work4">
                     <div class="work1title">
                         <h1 style="color: white;">طرق إيداع وسحب محلية وخارجية</h1>
-                        
+
                      </div>
                      <div class="work1pic">
                          <img src="/static/img/work4.png" alt="" width="60px" style="margin-top: 10px;">
                      </div>
-                     <h3 style="color: #f1d299;margin-top:15px;">نوفر لك خيارات متعددة مناسبة لك للدفع والسحب</h3>
+                     <h3 style="color: #f8e580;margin-top:15px;">نوفر لك خيارات متعددة مناسبة لك للدفع والسحب</h3>
                   </div>
                   <div class="work5">
                     <div class="work1title">
                         <h1 style="color: white;">دعم مستمر</h1>
-                        
+
                      </div>
                      <div class="work1pic">
                          <img src="/static/img/work5.png" alt="" width="60px" style="margin-top: 10px;">
                      </div>
-                     <h3 style="color: #f1d299;margin-top:15px;">نقدم لك دعما للمساعدة طيلة الأسبوع</h3>
+                     <h3 style="color: #f8e580;margin-top:15px;">نقدم لك دعما للمساعدة طيلة الأسبوع</h3>
                   </div>
               </div>
 
@@ -741,23 +850,20 @@
         </div>
 
 
-        <div id="system" style="text-align: center;color:white;background-color:rgb(27, 27, 27);padding-top:150px;">
-            <h1 id="systemh1" >خططنا</h1>
-            <h1 id="systemh2" >أحصل على بطاقتك الآن</h1>
-            <img src="/static/img/sytstempic.png" alt="" width="100px" style="padding:30px;">
-            <h1 id="systemh3" style="padding-bottom: 20px;">نظام البطاقات الاستثمارية</h1>
-            <pre style="font-size: 23px;line-height:2;" >
- كل بطاقة تحتوي على عدد من الحصص الاستثمارية من 1 الى 40 حصة-
-                      قيمة الحصة الاستثمارية الواحدة 30000دج-
-                                  مدة الاستثمار : سنة كاملة-  
-                       الحصول على ارباح متفاوتة كل 3 اشهر-
-            </pre>
-            <button id="systembutton" onclick="document.location='http://elkaysar.com/login'">استثمر الآن</button>
-
+        <div id="text_from_admin">
+            <textarea id="home_text" readonly >{{ text | safe}}</textarea>
         </div>
 
-        <div id="text_from_admin">
-            <pre>{{ text }}</pre>
+        <div id="pic_from_admin">
+            <img src="/static/img/pic_from_admin.png" alt="My Image" onerror="this.style.display='none'" width="60%" height="500px" >
+        </div>
+        
+        <div id="iframe-wrapper">
+            <iframe src="/static/img/pdf_from_admin.pdf" alt="My Image" id="pdf"></iframe>
+          </div>
+
+        <div id="video_from_admin">
+            <video src="/static/img/video_from_admin.mp4" alt="My Image" controls onerror="this.style.display='none'" width="60%" height="500px" ></video>
         </div>
 
 
@@ -765,24 +871,30 @@
             <div id="gpsdiv">
              <div id="contactus">
                   <h1>لاستفساراتكم</h1>
-                  <span>رقم الهاتف</span><br><span style="font-size: 30px;">+213 656 07 04 85</span><br>
+                  <span>رقم الهاتف</span><br>
+                  <span style="font-size: 30px;">+213 656 07 04 85</span><br>
+                  <span style="font-size: 30px;">+213 772 40 75 35</span><br>
                   <br>
                   <a href="https://www.facebook.com/profile.php?id=100086995423060&mibextid=ZbWKwL"><img src="/static/img/fb.png" alt="" width="50px"></a>
                   <a href="https://t.me/cesarinvestissement"><img src="/static/img/tele.png" alt="" width="50px"></a>
+                  <a href="https://www.instagram.com/cesar_investment/?igshid=YmMyMTA2M2Y="><img src="/static/img/insta.png" alt="" width="50px"></a>
+
              </div>
              <div id="gps">
                <h1>موقعنا على الخريطة</h1>
                <iframe id="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.0092821270637!2d3.1966487152883882!3d36.7463482799597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8446867b69171e6c!2zMzbCsDQ0JzQ2LjkiTiAzwrAxMSc1NS44IkU!5e0!3m2!1sfr!2sdz!4v1674128403364!5m2!1sfr!2sdz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
              </div>
             </div>
-            
+
         </div>
 
     </main>
-    
+
 
 
     <script>
+
+
         function myFunction() {
             var x = document.getElementById("menuheader");
             if (x.className === "topnav") {
@@ -794,21 +906,51 @@
 
         $(document).ready(function(){
             $("a").on('click', function(event) {
-          
+
               if (this.hash !== "") {
                 event.preventDefault();
-          
+
                 var hash = this.hash;
-          
+
                 $('html, body').animate({
                   scrollTop: $(hash).offset().top
                 },800, function(){
-             
+
                   window.location.hash = hash;
                 });
-              } 
+              }
             });
           });
+
+
+
+
+          let fileUrl = '/static/img/pdf_from_admin.pdf'; // replace with your file path
+          let xhr = new XMLHttpRequest();
+          xhr.open('HEAD', fileUrl, true);
+          xhr.onreadystatechange = function() {
+              if (xhr.readyState == xhr.DONE) {
+                  if (xhr.status == 200) {
+                      // display the iframe with the PDF file
+                      document.getElementById('iframe-wrapper').innerHTML = `<iframe src="${fileUrl}" alt="My Image"></iframe>`;
+                  } else {
+                      // hide the iframe
+                      document.getElementById('iframe-wrapper').style.display = 'none';
+                  }
+              }
+          };
+          xhr.send();
+          
+
+          jQuery(function($) {
+            var text = $('#home_text').val(),
+                matches = text.match(/\n/g),
+                breaks = matches ? matches.length : 3;
+          
+            $('#home_text').attr('rows', breaks + 2);
+          });    
     </script>
+
+    
 </body>
 </html>
